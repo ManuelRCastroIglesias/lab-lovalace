@@ -1,0 +1,15 @@
+[
+DoWhile(
+    [
+Draw("east", 1),
+Shift("east",2),
+Draw("east", getDimension()),
+Shift("south",1),
+Draw("west", getDimension()),
+Shift("west",2),
+Draw(),
+ ],
+    Not(
+      IsOnEdge("south"))),
+  Draw()
+]
