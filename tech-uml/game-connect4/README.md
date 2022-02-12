@@ -23,7 +23,7 @@ Universo Santa Tecla
   
 ### initialState  
   
-![Estado_inicial](./docs/images/estado final.png)  
+![Estado_inicial](.images/estado final.png)  
   
 ### finalState 
 
