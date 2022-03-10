@@ -1,0 +1,57 @@
+@startuml
+
+title inicitalState
+
+object ":Klondike" as a
+object ":Waste"  as b
+object ":Stock" as c
+object ":Tableau" as f
+object tableau
+object tableau7 
+object ":Foundation" as e
+note left: Are 4
+object ":Card" as c1 {
+	turnUp = "false"
+	rank = "random"
+	suit = "random"
+	}
+note right: Are 24 cards
+
+object ":Card" as c2 {
+	turnUp = "true"
+	rank = "random"
+	suit = "random"
+	}
+
+object ":Card" as c3 {
+	turnUp = "true"
+	rank = "random"
+	suit = "random"
+	}
+
+object ":Card" as c4 {
+	turnUp = "false"
+	rank = "random"
+	suit = "random"
+	}
+note left: 6 like this
+
+a *-- b
+a *-- c
+a *-- f
+a *-- e
+c o-- c1
+
+f o-- tableau
+f o-- tableau7
+tableau o-- c2
+tableau7 o-- c3
+tableau7 o-- c4
+
+
+note "are 7 tableaus\nwith incremental\namount of cards\nwith this same\nbehavior." as N3
+tableau .. N3
+N3 .. tableau7
+
+
+@enduml

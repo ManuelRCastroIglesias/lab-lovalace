@@ -1,0 +1,29 @@
+@startuml
+
+title inicitalState
+
+object ":Conect4"  as a
+object ":Player" as b
+object ":Player" as c
+object board  {
+  state = "empty"
+}
+
+object ":Disk" as d1 {
+	color = "red"
+	amount = "21"
+	status = "outside"
+	}
+
+object ":Disk" as d2 {
+	color = "yellow"
+	amount = "21"
+	status = "outside"
+	}
+
+a *-- board
+a *-- b
+a *-- c
+b -down-> d2
+c -down-> d1
+@enduml

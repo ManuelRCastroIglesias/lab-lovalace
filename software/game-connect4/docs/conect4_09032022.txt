@@ -1,0 +1,27 @@
+@startuml
+
+title Vocabulary
+
+Conect4 *-- Board
+Conect4 *-- "7..6x7"Turn
+Conect4 *-- "2" Player
+Disk <|-- "6x7/2" Yellow
+Disk <|-- "6x7/2" Red
+Board *-- "7" Column
+Board *-- "6" File
+Board *-- Cell
+Cell *--> File
+Cell *--> Column
+Player -right-> "6x7/2" Disk
+Turn -down-> Player :active
+Player ..> Board
+Player -down-> Goal
+Board -down-> "7..6x7"Insertion
+Goal -down-> "4" Insertion
+Insertion -down-> Disk
+Insertion -right-> Cell
+Disk -right-> Cell
+Goal <|-- Horizontal
+Goal <|-- Vertical
+Goal <|-- Diagonal
+@enduml

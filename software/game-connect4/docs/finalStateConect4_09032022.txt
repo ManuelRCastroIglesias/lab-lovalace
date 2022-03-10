@@ -1,0 +1,28 @@
+@startuml
+
+title finalState
+
+object conect4
+object turn
+object player
+object goal
+object insertion
+object diagonal
+object board
+object disk {
+	color = "yellow"
+	amount = "4"
+	}
+
+conect4 *-- turn 
+conect4 *-- board
+conect4 *-- player
+player ..> board
+turn -down-> player : active
+board -down-> insertion
+goal -down-> insertion
+insertion -right-> disk
+player -right-> goal
+player -down-> disk
+goal <|-down- diagonal
+@enduml
