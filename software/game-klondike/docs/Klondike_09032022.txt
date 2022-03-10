@@ -1,0 +1,62 @@
+@startuml
+title Vocabulary
+
+abstract Pile
+enum Rank {
+	Ace
+	Two
+	...
+	Queen
+	King
+}
+
+enum TypeOfMovement {
+	StockToWaste
+	WasteTotableau
+	WasteToFoundation
+	WasteToStock
+	TableauToFoundation
+	TableauToTableau
+	FoundationToTableau
+}
+class Card {
+upturn : boolean
+}
+
+Klondike *-- Player
+Klondike *-- "7" Tableau
+Klondike *-- "4" Foundation
+Klondike *-- Waste
+Klondike *-- Stock
+
+Pile --> Movement
+Pile <|-- Tableau
+Pile <|-- Foundation
+Pile <|-- Waste
+Pile <|-- Stock
+Card *-right-> Rank
+Card o--> "0..n" Tableau
+Card o--> "0..24" Waste
+Card o--> "0.24" Stock
+Card o--> "0..13" Foundation
+Card o--> Suit
+Suit *-- Color
+Color <|-- Red
+Color <|-- Black
+Suit <|-- Heart
+Suit <|-- Diamond
+Suit <|-- Club
+Suit <|-- Spade
+Heart --> Red
+Diamond --> Red
+Club --> Black
+Spade --> Black
+Movement *-right-> TypeOfMovement
+Player -down-> "1..n"Movement
+Player -down-> Goal
+Goal ..> Movement
+Movement -down-> Card
+Movement -right-> Pile : origin
+Movement -right-> Pile : destination
+Goal -down-> "4" Foundation
+@enduml
