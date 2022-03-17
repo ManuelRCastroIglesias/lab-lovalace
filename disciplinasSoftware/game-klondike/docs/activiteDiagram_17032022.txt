@@ -1,0 +1,123 @@
+@startuml
+start
+: Shuffle; 
+
+
+partition Initialization {
+    : Put 24 cards on Stock;
+	note right
+	   All cards are face down;
+	end note
+   : Put 28 cards on 7 Tableaus;
+}
+note right
+  There are 7 tableaus, 
+  each tableau has the first card face up 
+  and the others face down. 
+  The first tableau has one card 
+  and the last tableau has 7 cards. 
+  The number of cards increases 
+  from one tableau to the other 
+  from left to right.
+end note
+
+while (Are all 4 foundations complete? Or Is no more movement possible?)
+  partition Game {
+	  switch(Move)
+
+	  case (StockToWaste)
+	    if (Is the Stock empty?) then (No)
+	  	 	if (Is the Waste empty?) then (Yes)
+	            :Turn up n cards;
+                :Move 1..3 cards\nfrom Stock to Waste;
+   		    else (No)
+	  			:Turn up n cards;
+                :Move 1..3 cards\nfrom Stock to Waste;
+  			endif
+	    else (Yes)
+	  		if (Is the Waste empty?) then (No)
+	          :Turn down all card;
+	          :Return cards to Stock;
+	        endif
+        endif
+
+	  case (WasteToTableau)
+	   if (Is the Tableau empty?) then (Yes)
+	  			: Move card from \nWaste to Tableau;
+	   else (No)
+	      if (Is the first waste card\ngreater than the table\ncard and of the opossitve color?) then (Yes)
+	  			:Move card from \nWaste to Tableau;
+	  	  else (No)
+	  		:Do not move;
+	      endif
+	    endif
+
+	  case (WasteToFoundation)
+	    if (Is the Foundation empty?) then (Yes)
+	  		if (Is the first Waste card an A?) then (Yes)
+	  			: Move card from \nWaste to Foundation;
+	        else (No)
+	  			:Do not move;
+	        endif
+	    else (No)
+	      if (Is the first waste card\ngreater than the foundation\n card and of the same suit?) then (Yes)
+	  			:Move card from\nWaste to Foundation;
+	  	  else (No)
+	  		:Do not move;
+	      endif
+	    endif
+	  case (WasteToStock)
+	    if (Is the Stock empty?) then (Yes)
+          if (Is the Waste empty?) then (No)
+   			:Turn donw the cards;
+	  		:Return cards to Stock;
+         endif
+       endif
+
+	  case (TableauToTableau)
+	   if(Is the Tableau origin empty?) then (No)
+	     if(Is the Tableau destination empty?) then (Yes)
+	  			:Move card from\n origin to destination;
+	     else (No)
+	        if(Is the first origin card\ngreater than the destination\ncard and of the opposite color?() then (Yes)
+	  			::Move card from\n origin to destination;
+	        else (No)
+	  			:Do not move;
+	        endif
+	     endif
+	  endif
+
+
+	  case (TableauToFoundation)
+	     if (Is the Foundation empty?) then (Yes)
+	  		if (Is the first Tableau card an A?) then (Yes)
+	  			: Move card from \nTableau to Foundation;
+	        else (No)
+	  			:Do not move;
+	        endif
+	    else (No)
+	      if (Is the first tableau card\ngreater than the foundation\ncard and of the same suit?) then (Yes)
+	  			:Move card from \nTableau to Foundation;
+	  	  else (No)
+	  		:Do not move;
+	      endif
+	    endif
+	  
+	  case (FoundationToTableau)
+	   if(Is the Foundation empty?) then (No)
+	     if(Is the Tableau empty?) then (Yes)
+	  			:Move card from\n Foundation to Tableau;
+	     else (No)
+	        if(Is the first foundation card\n greater than the tableau \ncard and of the opposite color?() then (Yes)
+	  			::Move card from\n Foundation to Tableau;
+	        else (No)
+	  			:Do not move;
+	        endif
+	     endif
+	  endif
+	  
+	endswitch
+} 
+endwhile
+stop
+@enduml

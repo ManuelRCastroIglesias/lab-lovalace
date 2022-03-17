@@ -1,0 +1,24 @@
+@startuml
+
+start
+repeat
+  :insert yellow disk;
+  :insert red disk;
+repeat while (there are 3 yellow disk on board)
+
+:insert yellow disk;
+
+if (Is connect 4?) then (true)
+ else (false)
+  repeat 
+    :insert red disk;
+    if (Is connect 4?) then (true)
+      else (false)
+        :insert yellow disk;
+    endif
+   repeat while (is connect 4 or 21 disk) 
+endif
+
+stop
+
+@enduml

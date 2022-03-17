@@ -1,0 +1,20 @@
+@startuml
+
+state " " as 1 
+state " " as 2
+state " " as 3
+state " " as 4
+state " " as 5
+
+[*] --> 1
+1 --> 2 : insert\ndisk yellow
+2 --> 1 : insert\ndisk red
+2 --> 3 : [isCompleteRedDisk]
+3 --> [*]  : [isConect4RedDisk]
+3 --> 4 : insert\ndisk yellow
+4 --> 5 : insert\ndisk red
+5 --> 4 : insert\ndisk yellow
+5 --> [*] : [isConect4RedDisk]
+4 --> [*] : [isConect4YellowDisk]
+
+@enduml
