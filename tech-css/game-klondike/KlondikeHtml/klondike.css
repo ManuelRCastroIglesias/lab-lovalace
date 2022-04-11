@@ -1,0 +1,166 @@
+html,
+body {
+    margin: 0;
+    width: auto;
+    height: 400px;
+    background-color: #008000;
+}
+
+table {
+    width: 70%;
+    height: 99%;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+tr{
+    height: 5%;
+    margin: 1em;
+}
+
+.trCard{
+    height: 48%;
+    margin: 1em;
+}
+
+td {
+    width: 12%;
+    background: none;
+    margin: 1em;
+}
+.space {
+    height: 2em;
+}
+
+.border {
+    border-color: #808080;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.stock {
+    position: inherit;
+    background-color: transparent;
+    background-image: url("/KlondikeHtml/images/facedown-card.png");
+    object-fit: contain;
+    object-position: center;
+    background-repeat: no-repeat;
+    width: auto;
+   
+}
+
+.HeartFoundation {
+    background-color: transparent;
+    background-image: url("/KlondikeHtml/images/background-heart.png");
+    opacity: 0.6;
+    object-fit: contain;
+    object-position: center;
+    background-repeat: no-repeat;
+    width: auto;
+
+}
+
+.DiamondFoundation {
+    background-color: transparent;
+    background-image: url("/KlondikeHtml/images/background-diamond.png");
+    opacity: 0.6;
+    object-fit: contain;
+    object-position: center;
+    background-repeat: no-repeat;
+    width: auto;
+
+}
+
+.ClubFoundation {
+    background-color: transparent;
+    background-image: url("/KlondikeHtml/images/background-club.png");
+    opacity: 0.6;
+    object-fit: contain;
+    object-position: center;
+    background-repeat: no-repeat;
+    width: auto;
+
+}
+
+
+.SpadeFoundation {
+    background-color: transparent;
+    background-image: url("/KlondikeHtml/images/background-spade.png");
+    opacity: 0.6;
+    object-fit: contain;
+    object-position: center;
+    background-repeat: no-repeat;
+    width: auto;
+}
+
+
+.tableau {
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+.dvimage {
+    position: relative; 
+    left: 0; 
+    top: 0;
+    background-color: transparent;
+}
+
+.image1{
+    position:absolute;
+    z-index: 1;
+    top: -84px;
+    left: 0px;
+  }
+  
+  .image2
+  {
+    position:absolute;
+    z-index: 2;
+    top: -77px;
+    left: 1px;
+  }
+
+  .image3
+  {
+    position:absolute;
+    z-index: 3;
+    top: -70px;
+    left: 2px;
+  }
+  .image4
+  {
+    position:absolute;
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 4;
+    top: -63px;
+    left: 3px;
+  }
+  .image5
+  {
+    position:absolute;
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 5;
+    top: -56px;
+    left: 4px;
+  }
+  .image6
+  {
+    position:absolute;
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 6;
+    top: -49px;
+    left: 5px;
+  }
+  .image7
+  {
+    position:absolute;
+    object-fit: fill;
+    background-repeat: no-repeat;
+    z-index: 7;
+    top: -42px;
+    left: 6px;
+  }

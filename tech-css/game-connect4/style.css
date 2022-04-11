@@ -1,0 +1,84 @@
+.container {
+    margin-top: 100px;
+    display: grid;
+    grid-template-areas: "left main right";
+}
+
+.Player1{
+    display: inline-block;
+    text-align: center;
+    background-color: yellow;
+    grid-area: left;
+    width : 200px;
+}
+
+.Player2{
+    display: inline-block;
+    text-align: center;
+    background-color: blue;
+    grid-area: right;
+    width : 200px;
+}
+
+.current-1{
+    width:200px;
+    background: black;
+}
+
+.current-2{
+    width: 200px;
+    background: black;
+}
+
+
+.grid{
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    height: 250px;
+    width: 294px;
+    grid-area: main;
+    background: red;
+}
+
+.grid div{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.grid .taken{
+    border: 1px solid white;
+}
+
+.player-one{
+    background-color: yellow;
+    border-radius: 20px;
+}
+
+.player-two{
+    background-color: blue;
+    border-radius: 20px;
+}
+
+button{
+    display: block;
+    text-align: center;
+    margin: 50px auto;
+    background-color: blue;
+    color: white;
+    border: none;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: blue;
+    font-size: 30px;
+    transition: ease-out is;
+}
+
+.title {
+    text-align: center;
+    margin-top: 50px;
+}
