@@ -3,6 +3,9 @@ const { Console } = require("console-mpds");
 const console = new Console();
 const fractions = [];
 const SIZE = 2;
+
+console.writeln(`Primera fracción: `);
+
 for (let i = 0; i < SIZE; i++) {
   fractions[i] = readFraction();
 }
