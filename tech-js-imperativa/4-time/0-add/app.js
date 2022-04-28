@@ -1,6 +1,7 @@
 const { Console } = require("console-mpds");
-
 const console = new Console();
+// --------------------------------------------/
+/// Autor: Manuel Rosendo Castro Iglesias.
 
 /// Primer ciclo "dijo que no usaramos no FOR() ni WHILE() ni DO WHILE()
 

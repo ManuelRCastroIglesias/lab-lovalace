@@ -1,6 +1,7 @@
 const { Console } = require("console-mpds");
-
 const console = new Console();
+// --------------------------------------------/
+/// Autor: Manuel Rosendo Castro Iglesias.
 
 // Se consideran todos los meses de 30 días.
 // ### 3-date/0-valid
