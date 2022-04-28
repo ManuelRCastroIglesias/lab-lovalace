@@ -1,6 +1,7 @@
 ﻿const { Console } = require("console-mpds");
-
 const console = new Console();
+// --------------------------------------------/
+/// <Autor:> Manuel Rosendo Castro Iglesias.
 
 // ### 1-seasonWithPart/v0
 // Da error con fechas fuera de rango, tengo que corregirlo.
