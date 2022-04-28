@@ -1,3 +1,9 @@
+const { Console } = require("console-mpds");
+const console = new Console();
+// --------------------------------------------/
+/// <Autor:> Manuel Rosendo Castro Iglesias.
+
+
 /// 2 - coordinate / 1 - quadrant
 /// Dame la abcisa de la coordenada: 2
 /// Dame la ordenada de la coordenada: 2
