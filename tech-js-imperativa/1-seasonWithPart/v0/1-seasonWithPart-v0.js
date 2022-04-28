@@ -3,8 +3,11 @@
 const console = new Console();
 
 // ### 1-seasonWithPart/v0
+// Da error con fechas fuera de rango, tengo que corregirlo.
+// Una vez esté terminado se eliminarán comentarios innecesarios.
 
 // TODO: yearNow * Falta verificar dia y mes actual *
+
 const yearNow =2022;
 
 const day   = console.readNumber ('Escriba un día (1-30): ');
@@ -22,7 +25,7 @@ const mySeason_Year  = year  > 0 ? (year  <= yearNow ? " del año " + year  : fa
 
 const aboutEarly_Text = " cae a principios";
 const aboutMiddleText = " cae a mediados";
-const aboutLate__Text = " cae a finales";
+const aboutLate_Text = " cae a finales";
 
 const winterSeasonText = " del Invierno";
 const springSeasonText = " de la Primavera";
@@ -33,15 +36,15 @@ const mySeasonText =
 		 month ===  1 ?  aboutEarly_Text + winterSeasonText: 
 		 month ===  2 ?  aboutMiddleText + winterSeasonText: 
 		 month ===  3 ?  
-		   (day <  21 ? abouteLate_Text + winterSeasonText : aboutEarly_Text + springSeasonText):
+			(day < 21 ? aboutLate_Text + winterSeasonText : aboutEarly_Text + springSeasonText):
 		 month ===  4 ?  aboutEarly_Text + springSeasonText: 
 		 month ===  5 ?  aboutMiddleText + springSeasonText: 
 		 month ===  6 ?  
-		   (day <  21 ? aboutEarly_Text + springSeasonText : aboutEarly_Text + summerSeasonText):
+			(day < 21 ? aboutLate_Text + springSeasonText : aboutEarly_Text + summerSeasonText):
 		 month ===  7 ?  aboutEarly_Text + summerSeasonText: 
 		 month ===  8 ?  aboutMiddleText + summerSeasonText: 
 		 month ===  9 ?  
-		   (day <  21 ? aboutEarly_Text + summerSeasonText : aboutEarly_Text + autumnSeasonText):
+			(day < 21 ? aboutLate_Text + summerSeasonText : aboutEarly_Text + autumnSeasonText):
 		 month === 10 ?  aboutEarly_Text + autumnSeasonText: 
 		 month === 11 ?  aboutMiddleText + autumnSeasonText: 
 		   (day <  21 ? aboutEarly_Text + summerSeasonText : abouteLate_Text + winterSeasonText);

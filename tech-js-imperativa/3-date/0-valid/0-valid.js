@@ -21,7 +21,3 @@ const dateValid = daySmallvalue === dayLargeValue === monthSmallvalue === monthL
 
 
 const myDate = dateValid ? console.writeln(`La fecha `+day+`/`+month+`/`+year+` es una fecha válida`) : console.writeln(`La fecha `+day+`/`+month+`/`+year+` no es una fecha válida`);
-
-// console.readString('text');
-
-// --------------------------------------------------------------------------- 
