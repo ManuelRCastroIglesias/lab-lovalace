@@ -3,8 +3,11 @@
 const console = new Console();
 
 // ### 1-seasonWithPart/v0
+// Da error con fechas fuera de rango, tengo que corregirlo.
+// Una vez esté terminado se eliminarán comentarios innecesarios.
 
 // TODO: yearNow * Falta verificar dia y mes actual *
+
 const yearNow =2022;
 
 const day   = console.readNumber ('Escriba un día (1-30): ');
