@@ -18,7 +18,7 @@ const secondSeconds = console.readNumber('Dame los Segundos: ');
 console.writeln(`La suma es ${firstHours - secondHours}:${firstMinutes - secondMinutes}:${firstSeconds - secondSeconds}`);
 
 // Para descomentar rapidamente en Visual Studio: Quitar o poner la primera / en  //*//
-/*//
+//*//
     ////   -- Importante no alterar el orden de las siguientes l�neas  --  --  --  --  --  --  --
     const hours = firstHours + secondHours
     const seconds = firstSeconds + secondSeconds;
@@ -27,8 +27,8 @@ console.writeln(`La suma es ${firstHours - secondHours}:${firstMinutes - secondM
     minutes > 60 ? (hours += (minutes - minutes % 60) / 60) : minutes = minutes % 60;
     ////   -- Importante no alterar el orden de las l�neas precedentes --  --  --  --  --  --  --
     console.writeln(`La suma es ${hours}:${minutes}:${seconds}`);
-
-
+//*/
+/*//
     console.writeln(``);
 
     /// Segundo ciclo "dijo que no usaramos no FOR() ni WHILE() ni DO WHILE()
