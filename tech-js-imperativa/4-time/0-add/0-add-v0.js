@@ -1,9 +1,10 @@
 const { Console } = require("console-mpds");
 const console = new Console();
 // --------------------------------------------/
-/// Autor: Manuel Rosendo Castro Iglesias.
+/// Autor:  Manuel Rosendo Castro Iglesias.
+/// Autora: María Paz López.
+/// Versión con sentencias IF, WHIL y Do-WHILE. {y FOR() por no dejar}
 
-/// Dijo D. Luis que no usaramos ni FOR(), ni WHILE(), ni DO WHILE(), ni LET.
 const firstHours = console.readNumber('Dame las horas: ');
 const firstMinutes = console.readNumber('Dame los  minutos: ');
 const firstSeconds = console.readNumber('Dame los  segundos: ');
@@ -22,11 +23,12 @@ const addedMinutes = firstMinutes + secondMinutes + minutesFromSeconds;
 const residueMinutes = addedMinutes % 60;
 const hoursFromMinutes = (addedMinutes - residueMinutes) / 60;
 
-/*// Para intecambiar código añadir barra al inicio.
+/// Es innecesario pero nos sale gratis. 
+/*// Para intecambiar código añadir barra al inicio. Funciona en Visual Studio * 
 	/*/
 	const residueHours = firstHours + secondHours + hoursFromMinutes;
 	console.writeln(`La suma es ${residueHours}:${residueMinutes}:${residueSeconds}`);
-	/*/ // Era innecesario pero sale gratis.
+	/*/ 
 	const addedHours = firstHours + secondHours + hoursFromMinutes;
 	const residueHours = addedHours % 24;
 	const daysFromHours = (addedHours - residueHours) / 24;
