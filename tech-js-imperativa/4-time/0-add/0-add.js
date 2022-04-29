@@ -3,8 +3,7 @@ const console = new Console();
 // --------------------------------------------/
 /// Autor: Manuel Rosendo Castro Iglesias.
 
-/// Primer ciclo "dijo que no usaramos ni FOR() ni WHILE() ni DO WHILE()
-
+/// Dijo D. Luis que no usaramos ni FOR(), ni WHILE(), ni DO WHILE(), ni LET.
 const firstHours = console.readNumber('Dame las horas: ');
 const firstMinutes = console.readNumber('Dame los  minutos: ');
 const firstSeconds = console.readNumber('Dame los  segundos: ');
@@ -23,7 +22,6 @@ const addedMinutes = firstMinutes + secondMinutes + minutesFromSeconds;
 const residueMinutes = addedMinutes % 60;
 const hoursFromMinutes = (addedMinutes - residueMinutes) / 60;
 
-
 /*// Para intecambiar código añadir barra al inicio.
 	/*/
 	const residueHours = firstHours + secondHours + hoursFromMinutes;
@@ -34,5 +32,4 @@ const hoursFromMinutes = (addedMinutes - residueMinutes) / 60;
 	const daysFromHours = (addedHours - residueHours) / 24;
 	console.writeln(`La suma es ${daysFromHours} días y ${residueHours}:${residueMinutes}:${residueSeconds}`);
 //*/
-
 console.writeln();
