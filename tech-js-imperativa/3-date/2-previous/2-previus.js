@@ -25,15 +25,15 @@ let yearPreviusSmall = year;
 
 // Lógica -- datePrevius --
 (month === day === year === 1) ? 
- yearPreviusSmall = year-1: 
-(month === day === 1 ? 
- dayPreviusSmall = month-1 : 
-(day === 1) ? 
- monthPreviusSmall = day+29 : 
- dayPreviusSmall = day-1);
+	yearPreviusSmall = year-1: 
+		(month === day === 1 ? 
+			 dayPreviusSmall = month-1 : 
+				(day === 1) ? 
+					monthPreviusSmall = day+29 : 
+						dayPreviusSmall = day-1);
 
 const myDate = dateValid ? 
 console.writeln(`La fecha `+day+`/`+month+`/`+year+` y la anterior fecha es `+dayPreviusSmall+`/`+monthPreviusSmall+`/`+yearPreviusSmall) : 
-console.writeln(`La fecha `+day+`/`+month+`/`+year+` No puedo hacer ese Cálculo o la fecha no es válida`);
+	console.writeln(`La fecha `+day+`/`+month+`/`+year+` No puedo hacer ese Cálculo o la fecha no es válida`);
 
 // console.readString('text');
