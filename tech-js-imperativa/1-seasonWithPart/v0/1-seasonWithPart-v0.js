@@ -50,7 +50,7 @@ const mySeasonText =
 		 month === 11 ?  aboutMiddleText + autumnSeasonText: 
 			(day < 21 ? aboutEarly_Text + summerSeasonText : aboutLate_Text + winterSeasonText);
 
-console.writeln(mySeason_Day+mySeason_Month+mySeason_Year+mySeasonText+".");
+console.writeln(´${ mySeason_Day }{ mySeason_Month }{ mySeason_Year }{ mySeasonText }`.`);
 
 
 						
