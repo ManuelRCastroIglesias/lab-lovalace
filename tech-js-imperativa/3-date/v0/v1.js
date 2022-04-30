@@ -5,14 +5,11 @@ const console = new Console();
 /// Autora: María Paz López.
 /// Un ejercicio de lo más divertido.
 /// ### 1-seasonWithPart/v0
-/// Hemos utilizado de todo: Ternario, While, Switch, 
+/// Hemos utilizado de todo: Ternario, Do-While, Switch, 
 /// y esperamos a poner los nombres de los días y los meses
-/// para usar el Arrays, For y Do-While.
+/// para usar el Arrays, For y While.
 
-/// OJO:  Hay un error aún, pero estoy cansado. Mañana sigo.
-/// OJO:  No hacer cambios importantes cuando estas cansado.
-/// OJO:  !Por poco la lío parda!
-
+/// OJO:  Sigue habiendo un error aún, ya lo encontraré.
 
 //*// // TODO: Crear objeto GlobalSettings() parámetros generales del programa.
 const yearNow = 2022; // Falta añadir método fecha actual.
@@ -55,9 +52,12 @@ do {
 			myEasterEggs = true;
 		}
 		else {
-			console.write(mySeasonDay = " Error en día");
-			/* ResetSettings() */
+			//*// ResetSettings() 
+			mySeasonDay = "";
+			mySeasonText = "";
 			myEasterEggs = false;
+			//*/
+			console.write(" --> Error en día <-- ");
 		}
 	}
 
@@ -67,9 +67,12 @@ do {
 			myEasterEggs = true;
 		}
 		else {
-			console.write(mySeasonMonth = " Error en mes");
-			/* ResetSettings() */
+			//*// ResetSettings() 
+			mySeasonMonth = "";
+			mySeasonText = "";
 			myEasterEggs = false;
+			//*/
+			console.write(mySeasonMonth = " --> Error en mes <-- ");
 		}
 	}
 
@@ -80,9 +83,12 @@ do {
 			myEasterEggs = true;
 		}
 		else {
-			console.write(mySeasonYear = " Error en año");
-			/* ResetSettings() */
+			//*// ResetSettings() 
+			mySeasonYear = "";
+			mySeasonText = "";
 			myEasterEggs = false;
+			//*/
+			console.write(mySeasonYear = " --> Error en año <-- ");
 		}
 	}
 	//*/ //Fin del bloque que da error.
