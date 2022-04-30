@@ -2,9 +2,12 @@
 const console = new Console();
 // --------------------------------------------/
 /// Autor: Manuel Rosendo Castro Iglesias.
+/// Autora: María Paz López.
+/// ### 3-date/2-previus
+/// Existe un error en los cálculos.
 
 // Se consideran todos los meses de 30 días.
-// ### 3-date/2-previus
+
 const day   = console.readNumber('Escriba el dia ( 1-30): ');
 const month = console.readNumber('Escriba el mes ( 1-12): ');
 const year  = console.readNumber('Escriba el año (01-99): ');
