@@ -46,6 +46,7 @@ while (myEasterEggs === false) {
 			myEasterEggs = false;
 		}
 	}
+	// Por aquí hay un error. No cambia la bariable myEasterEggs
 	if (month > 0) {
 		if (month <= 12) {
 			mySeasonmonth = " del mes " + month;
@@ -97,7 +98,7 @@ switch (x = month) {
 		mySeasonText = day < 21 ? TXT_LATE + TXT_SUMMER : TXT_EARLY + TXT_AUTUM;
 		break;
 	case 10:
-		mySeasonText = TXT_EARLYt + TXT_AUTUM;
+		mySeasonText = TXT_EARLY + TXT_AUTUM;
 		break;
 	case 11:
 		mySeasonText = TXT_MIDDLE + TXT_AUTUM;
