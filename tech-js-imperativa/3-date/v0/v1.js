@@ -46,7 +46,7 @@ while (myEasterEggs === false) {
 			myEasterEggs = false;
 		}
 	}
-	// Por aquí hay un error. No cambia la variable myEasterEggs
+	//*// Por aquí hay un error. No cambia la variable myEasterEggs
 	if (month > 0) {
 		if (month <= 12) {
 			mySeasonmonth = " del mes " + month;
@@ -57,6 +57,7 @@ while (myEasterEggs === false) {
 			myEasterEggs = false;
 		}
 	}
+	//*/
 	if (year > 0) {
 		if (year <= yearNow) {
 			mySeasonYear = " del año " + year;
