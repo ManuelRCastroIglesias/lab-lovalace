@@ -46,7 +46,7 @@ while (myEasterEggs === false) {
 			myEasterEggs = false;
 		}
 	}
-	// Por aquí hay un error. No cambia la bariable myEasterEggs
+	// Por aquí hay un error. No cambia la variable myEasterEggs
 	if (month > 0) {
 		if (month <= 12) {
 			mySeasonmonth = " del mes " + month;
