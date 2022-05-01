@@ -77,30 +77,47 @@
 # Resulatdos
 ---
 ```
-La fecha 31/1/1 No puedo hacer ese Cálculo o la fecha no es válida
-PS G:\GitHub\lab-lovalace\lab-lovalace\tech-js-imperativa\3-date\2-previous>  node .\2-previus.js
-Escriba el dia ( 1-30):  1
-Escriba el año (01-99):  1
+Escriba el dia ( 1-30):  12
+Escriba el mes ( 1-12):  12
+Escriba el año (01-99):  12
 
-false
+La fecha 12/12/12 y la anterior fecha es 11/12/12
 
-La fecha 1/13/1 No puedo hacer ese Cálculo o la fecha no es válida
-PS G:\GitHub\lab-lovalace\lab-lovalace\tech-js-imperativa\3-date\2-previous>  node .\2-previus.js
 Escriba el dia ( 1-30):  1
 Escriba el mes ( 1-12):  1
-Escriba el año (01-99):  210
+Escriba el año (01-99):  12
 
-false
+La fecha 1/1/12 No puedo hacer ese Cálculo o la fecha no es válida
 
-La fecha 1/1/210 No puedo hacer ese Cálculo o la fecha no es válida
-PS G:\GitHub\lab-lovalace\lab-lovalace\tech-js-imperativa\3-date\2-previous>  node .\2-previus.js
+Escriba el dia ( 1-30):  1
+Escriba el mes ( 1-12):  4
+Escriba el año (01-99):  12
+
+La fecha 1/4/12 y la anterior fecha es 30/3/12
+
 Escriba el dia ( 1-30):  1
 Escriba el mes ( 1-12):  1
 Escriba el año (01-99):  1
 
-false
+La fecha 1/1/1 y la anterior fecha es 1/1/1
 
-La fecha 1/1/1 No puedo hacer ese Cálculo o la fecha no es válida
-PS G:\GitHub\lab-lovalace\lab-lovalace\tech-js-imperativa\3-date\2-previous>
-```
+Escriba el dia ( 1-30):  36
+Escriba el mes ( 1-12):  1
+Escriba el año (01-99):  1
+
+La fecha 36/1/1 y la anterior fecha es 36/1/1
+
+Escriba el dia ( 1-30):  1
+Escriba el mes ( 1-12):  36
+Escriba el año (01-99):  1
+
+La fecha 1/36/1 y la anterior fecha es 30/35/1
+
+Escriba el dia ( 1-30):  1
+Escriba el mes ( 1-12):  1
+Escriba el año (01-99):  100
+
+La fecha 1/1/100 y la anterior fecha es 1/1/100
+
+
 
