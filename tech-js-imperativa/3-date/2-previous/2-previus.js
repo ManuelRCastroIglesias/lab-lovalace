@@ -36,7 +36,7 @@ let monthPreviusSmall = month;
 let yearPreviusSmall  = year;  
 
 // Lógica -- datePrevius --
-//*//
+/*//
 
 if ( !( year === month === day === 1 ) )
 {
@@ -68,7 +68,6 @@ if (day === month === 1)
 			if (day !== 1) { dayPreviusSmall = day - 1; };
 			dateValid = true;
 		};
-
 /*/
 !(month === day === year === 1) ?                 
 	yearPreviusSmall = year-1:                    
