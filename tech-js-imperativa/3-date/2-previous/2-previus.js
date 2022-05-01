@@ -8,16 +8,29 @@ const console = new Console();
 
 // Se consideran todos los meses de 30 días.
 
-let  day   = console.readNumber('Escriba el dia ( 1-30): ');
-let  month = console.readNumber('Escriba el mes ( 1-12): ');
-let  year  = console.readNumber('Escriba el año (01-99): ');
-let  daySmallvalue     =  day      <1   ;            // false
-let  monthSmallvalue   =  month    <1   ;            // false
-let  yearSmallvalue    =  year  -1 <1   ;            // false, esto evita el año 0
-let  monthLargeValue   =  month    >12  ;            // false
-let  dayLargeValue     =  day      >30  ;            // false
-let  yearLargeValue    =  year     >99  ;            // false
-let  dateValid = daySmallvalue === monthSmallvalue === yearSmallvalue === dayLargeValue === monthLargeValue === yearLargeValue; /* sirve como prueba */
+const day   = +console.readNumber('Escriba el dia ( 1-30): ');
+const month = +console.readNumber('Escriba el mes ( 1-12): ');
+const year  = +console.readNumber('Escriba el año (01-99): ');
+
+const daySmallvalue = day > 1;            // false
+console.writeln(daySmallvalue);
+const monthSmallvalue = month > 1;            // false
+console.writeln(monthSmallvalue);
+
+const yearSmallvalue = year > 1;            // false, esto evita el año 0
+console.writeln(yearSmallvalue);
+
+const dayLargeValue = day < 31;            // false
+console.writeln(daySmallvalue);
+
+const monthLargeValue = month < 13;            // false
+console.writeln(monthSmallvalue);
+
+const yearLargeValue = year < 100;            // false
+console.writeln(yearSmallvalue);
+
+
+const dateInvalid = (daySmallvalue === monthSmallvalue === yearSmallvalue === dayLargeValue === monthLargeValue === yearLargeValue); /* sirve como prueba */
 
 // ¡No sé como hacerlo sin Let! Me rindo.
 let dayPreviusSmall = day;    
@@ -25,42 +38,43 @@ let monthPreviusSmall = month;
 let yearPreviusSmall = year;  
 
 // Lógica -- datePrevius --
+//*//
 
-
-if (!(year === month === day === 1))
+if ( !( year === month === day === 1 ) )
 {
-	yearPreviusSmall = year - 1;
-	monthPreviusSmall = month - 1;
-	dayPreviusSmall = day + 29;
-}
-else if (month === day === 1)
-{
-	dayPreviusSmall = day + 29 ;
-	monthPreviusSmall = month + 11;
-}
-else if (day !== 1)
-{
-	dayPreviusSmall = day - 1;
-}
-else{
-	ErrorInDate = true;
-}
+	if (year - 1 > 0 )
+	{
+		yearPreviusSmall = year - 1;
+	}; // en otro caso llamar a método captura datos, return, o GOTO;
+	if (month !== 1)
+	{
+		if (day === 1)
+		{
+			dayPreviusSmall = day + 29; monthPreviusSmall = month - 1;
+		}
+		else
+		{
+			if (day !== 1) { dayPreviusSmall = day - 1;};
+		};
+	};
+};
 
+/*/
+!(month === day === year === 1) ?                 
+	yearPreviusSmall = year-1:                    
+	!(month === day === 1 ?                       
+			dayPreviusSmall = month-1 :           
+				(day === 1) ?					  
+					monthPreviusSmall = day+29 :  
+			dayPreviusSmall = day - 1);
+//*/
 
-
-
-
-
-//!(year === month === day === 1) ?                 
-//	yearPreviusSmall = year-1:                    
-//	!(month === day === 1 ?                       
-//			dayPreviusSmall = month-1 :           
-//				(day === 1) ?					  
-//					monthPreviusSmall = day+29 :  
-//						dayPreviusSmall = day-1); 
-
-//dateValid ? 
-console.writeln(`La fecha ${day}/${month}/${year} y la anterior fecha es ${dayPreviusSmall}/${monthPreviusSmall}/${yearPreviusSmall}`);
-//	console.writeln(`La fecha `+day+`/`+month+`/`+year+` No puedo hacer ese Cálculo o la fecha no es válida`);
+console.writeln(dateInvalid);
+//if (dateInvalid === false)
+//	{
+//		console.writeln(`La fecha ` + day + `/` + month + `/` + year + ` 
+//						y la anterior fecha es ` + dayPreviusSmall + `/` + monthPreviusSmall + `/` + yearPreviusSmall);
+//}
+//else ( console.writeln(`La fecha `+day+`/`+month+`/`+year+` No puedo hacer ese Cálculo o la fecha no es válida`) )
 
 // console.readString('text');
