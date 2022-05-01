@@ -16,7 +16,7 @@ const monthSmallvalue = month <1 ; // false
 const monthLargeValue = month >12 ; // false
 const yearSmallvalue = year <0 ; // false
 const yearLargeValue = year >99 ; // false
-/* con la misma lógica se pueden cancelar otros valores. */
+/* con la misma lógica se pueden calcular otros valores. */
 
 const dateValid =
     daySmallvalue ===
