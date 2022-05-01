@@ -18,7 +18,17 @@ const yearSmallvalue = year <0 ; // false
 const yearLargeValue = year >99 ; // false
 /* con la misma lógica se pueden cancelar otros valores. */
 
-const dateValid = daySmallvalue === dayLargeValue === monthSmallvalue === monthLargeValue === yearSmallvalue === yearLargeValue; /* sirve como prueba */
+const dateValid =
+    daySmallvalue ===
+    dayLargeValue ===
+    monthSmallvalue ===
+    monthLargeValue ===
+    yearSmallvalue ===
+    yearLargeValue;
+/* sirve como prueba */
 
 
-const myDate = dateValid ? console.writeln(`La fecha `+day+`/`+month+`/`+year+` es una fecha válida`) : console.writeln(`La fecha `+day+`/`+month+`/`+year+` no es una fecha válida`);
+dateValid ?
+    console.writeln( `La fecha ${ day }/${ month }/${ year } sí es una fecha válida` ) :
+    console.writeln( `La fecha ${ day }/${ month }/${ year } no es una fecha válida` );
+console.writeln();
