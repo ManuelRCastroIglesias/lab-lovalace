@@ -15,17 +15,17 @@ const relativOrdinate = ordinate > 0 ? 1 : ordinate < 0 ? -1 : 0;
 const quadrant = relativAbscissa + relativAbscissa + relativOrdinate;
 
 const overQuadrant =
-	quadrant === 3 ? " está en el primer cuadrante" :
-		quadrant === -1 ? " está en el segundo cuadrante" :
-			quadrant === -3 ? " está en el tercer cuadrante" :
-				quadrant === 1 ? " está en el cuarto cuadrante" : false;
+	quadrant === 3 ? " estÃ¡ en el primer cuadrante" :
+		quadrant === -1 ? " estÃ¡ en el segundo cuadrante" :
+			quadrant === -3 ? " estÃ¡ en el tercer cuadrante" :
+				quadrant === 1 ? " estÃ¡ en el cuarto cuadrante" : false;
 
 // Se mantiene del ejercicio anterior. Por compatibilidad.
 const textOnAxis =
-	abscissa === 0 && ordinate === 0 ? " está sobre el origen de coordenadas" :
+	abscissa === 0 && ordinate === 0 ? " estÃ¡ sobre el origen de coordenadas" :
 		abscissa !== 0 && ordinate !== 0 ? overQuadrant :
-			abscissa === 0 && ordinate !== 0 ? " está sobre el eje de abscisa" :
-				abscissa !== 0 && ordinate === 0 ? " está sobre el eje de ordenadas" : "";
+			abscissa === 0 && ordinate !== 0 ? " estÃ¡ sobre el eje de abscisa" :
+				abscissa !== 0 && ordinate === 0 ? " estÃ¡ sobre el eje de ordenadas" : "";
 
 console.writeln(`La coordenada (${abscissa}, ${ordinate})"${textOnAxis}.`)
 
