@@ -3,6 +3,8 @@ const console = new Console();
 // --------------------------------------------/
 /// Autor:  Manuel Rosendo Castro Iglesias.
 /// Autora: María Paz López.
+/// Contiene dos versiones. Añadir o quitar / al inicio de línea 28.
+/// Es innecesario pero nos sale gratis. 
 /// Versión con sentencias IF, WHIL y Do-WHILE. {y FOR() por no dejar}
 
 const firstHours = console.readNumber('Dame las horas: ');
@@ -23,7 +25,6 @@ const addedMinutes = firstMinutes + secondMinutes + minutesFromSeconds;
 const residueMinutes = addedMinutes % 60;
 const hoursFromMinutes = (addedMinutes - residueMinutes) / 60;
 
-/// Es innecesario pero nos sale gratis. 
 /*// Para intecambiar código añadir barra al inicio. Funciona en Visual Studio * 
 	/*/
 	const residueHours = firstHours + secondHours + hoursFromMinutes;
