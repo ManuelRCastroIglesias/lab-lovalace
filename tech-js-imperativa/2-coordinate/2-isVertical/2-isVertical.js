@@ -13,8 +13,8 @@ const abscisaDestination = console.readNumber( `Dame la abcisa de la coordenada:
 console.writeln( `Coordenada destino:` );
 const orderedOrigin = console.readNumber( `Dame la abcisa de la coordenada:` );
 const orderedDestination = console.readNumber( `Dame la abcisa de la coordenada:` );
+console.writeln();
 /// ----------------------------------------------------------------------------------
-
 if ( orderedOrigin === orderedDestination )
 {
     console.writeln( `La coordenada origen (${ abscissaOrigin }, ${ abscisaDestination }) y la coordenada destino (${ orderedOrigin }, ${ orderedDestination } no es un movimiento vertical` );

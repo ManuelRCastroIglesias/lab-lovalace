@@ -13,6 +13,7 @@ const abscisaDestination = console.readNumber( `Dame la abcisa de la coordenada:
 console.writeln( `Coordenada destino:` );
 const orderedOrigin = console.readNumber( `Dame la abcisa de la coordenada:` );
 const orderedDestination = console.readNumber( `Dame la abcisa de la coordenada:` );
+console.writeln();
 /// ----------------------------------------------------------------------------------
 if ( abscissaOrigin === abscisaDestination )
 {
