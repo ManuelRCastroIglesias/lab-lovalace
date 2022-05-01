@@ -7,21 +7,28 @@ const console = new Console();
 // TODO: yearNow * Falta verificar dia y mes actual *
 const yearNow = 2022;
 let day;
+let myDate;
 let mySeasonDay;
 
 // TODO: mySeasons      * Crear bucle reintento con valores false *
+
 do
 {
+	myDate = false;
 	if ( mySeasonDay === false )
 	{
 		let txtError = "Escribió un día no válido";
 		day = console.readNumber( `${ txtError }\n Escriba un día (1-30): ` );
 	}
-	mySeasonDay = day > 0
-		? ( day <= 31 ? "El día " + day : false )
-		: false;
+	if ( day > 0 || day <= 31 )
+	{
+		mySeasonDay = `El día ${ day }`;
+	}
+//	mySeasonDay = day > 0
+//		? ( day <= 31 ? "El día " + day : false )
+//		: false;
 }
-while ( mySeasonDay === false );
+while ( myDate !== false );
 
 // TODO: mySeasonMonth * Si hay que nombrar el mes corregir el texto *
 // TODO: nameOfTheMonth * método Nombres del mes *
