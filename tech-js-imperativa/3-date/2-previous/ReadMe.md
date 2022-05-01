@@ -30,7 +30,7 @@
 >>Dame el año: 1
 >> --> Debe volver a pedir el dato. El año 0 no existe.
 >>Dame el día: 36
->>Dame el mes: 361
+>>Dame el mes: 1
 >>Dame el año: 1
 >> --> Debe volver a pedir el dato. día >30
 >>Dame el día: 1
