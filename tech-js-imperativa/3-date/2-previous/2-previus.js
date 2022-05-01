@@ -12,25 +12,14 @@ const day   = +console.readNumber('Escriba el dia ( 1-30): ');
 const month = +console.readNumber('Escriba el mes ( 1-12): ');
 const year  = +console.readNumber('Escriba el año (01-99): ');
 
-const daySmallvalue = day > 1;            // false
-console.writeln(daySmallvalue);
-const monthSmallvalue = month > 1;            // false
-console.writeln(monthSmallvalue);
+const daySmallValue = day-1 >= 1 ;            // true
+const monthSmallValue = month-1 >= 1 ;            // true
+const yearSmallValue = year-1 >= 1 ;            // true, esto evita el año 0
+const dayLargeValue = day <= 30 ;            // true
+const monthLargeValue = month <= 12 ;            // true
+const yearLargeValue = year <= 99 ;            // true
 
-const yearSmallvalue = year > 1;            // false, esto evita el año 0
-console.writeln(yearSmallvalue);
-
-const dayLargeValue = day < 31;            // false
-console.writeln(daySmallvalue);
-
-const monthLargeValue = month < 13;            // false
-console.writeln(monthSmallvalue);
-
-const yearLargeValue = year < 100;            // false
-console.writeln(yearSmallvalue);
-
-
-const dateInvalid = (daySmallvalue === monthSmallvalue === yearSmallvalue === dayLargeValue === monthLargeValue === yearLargeValue); /* sirve como prueba */
+const dateValid = (daySmallValue === monthSmallValue === yearSmallValue === dayLargeValue === monthLargeValue === yearLargeValue); /* sirve como prueba */
 
 // ¡No sé como hacerlo sin Let! Me rindo.
 let dayPreviusSmall = day;    
@@ -69,12 +58,12 @@ if ( !( year === month === day === 1 ) )
 			dayPreviusSmall = day - 1);
 //*/
 
-console.writeln(dateInvalid);
-//if (dateInvalid === false)
-//	{
-//		console.writeln(`La fecha ` + day + `/` + month + `/` + year + ` 
-//						y la anterior fecha es ` + dayPreviusSmall + `/` + monthPreviusSmall + `/` + yearPreviusSmall);
-//}
-//else ( console.writeln(`La fecha `+day+`/`+month+`/`+year+` No puedo hacer ese Cálculo o la fecha no es válida`) )
+console.writeln();
+console.writeln(dateValid);
+console.writeln();
+if (dateValid === true) {
+	console.writeln(`La fecha ` + day + `/` + month + `/` + year + ` y la anterior fecha es ` + dayPreviusSmall + `/` + monthPreviusSmall + `/` + yearPreviusSmall);
+}
+else (console.writeln(`La fecha ` + day + `/` + month + `/` + year + ` No puedo hacer ese Cálculo o la fecha no es válida`));
 
 // console.readString('text');

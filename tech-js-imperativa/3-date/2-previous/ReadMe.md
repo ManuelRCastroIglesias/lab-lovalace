@@ -74,3 +74,33 @@
 >>---
 >---
 ---
+# Resulatdos
+---
+```
+La fecha 31/1/1 No puedo hacer ese Cálculo o la fecha no es válida
+PS G:\GitHub\lab-lovalace\lab-lovalace\tech-js-imperativa\3-date\2-previous>  node .\2-previus.js
+Escriba el dia ( 1-30):  1
+Escriba el año (01-99):  1
+
+false
+
+La fecha 1/13/1 No puedo hacer ese Cálculo o la fecha no es válida
+PS G:\GitHub\lab-lovalace\lab-lovalace\tech-js-imperativa\3-date\2-previous>  node .\2-previus.js
+Escriba el dia ( 1-30):  1
+Escriba el mes ( 1-12):  1
+Escriba el año (01-99):  210
+
+false
+
+La fecha 1/1/210 No puedo hacer ese Cálculo o la fecha no es válida
+PS G:\GitHub\lab-lovalace\lab-lovalace\tech-js-imperativa\3-date\2-previous>  node .\2-previus.js
+Escriba el dia ( 1-30):  1
+Escriba el mes ( 1-12):  1
+Escriba el año (01-99):  1
+
+false
+
+La fecha 1/1/1 No puedo hacer ese Cálculo o la fecha no es válida
+PS G:\GitHub\lab-lovalace\lab-lovalace\tech-js-imperativa\3-date\2-previous>
+```
+
