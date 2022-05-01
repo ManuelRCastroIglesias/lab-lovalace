@@ -35,6 +35,40 @@ let dayPreviusSmall   = day;
 let monthPreviusSmall = month;
 let yearPreviusSmall  = year;  
 
+// Lógica -- datePrevius --
+/*//
+
+if ( !( year === month === day === 1 ) )
+{
+
+};
+
+if (year - 1 > 0 )
+{
+	dateValid = false;
+};
+
+if (day === month === 1)
+{
+	yearPreviusSmall = year - 1;
+	dateValid = true;
+};
+
+
+	if (month !== 1)
+	{
+	};
+		if (day === 1)
+		{
+			dayPreviusSmall = day + 29; monthPreviusSmall = month - 1;
+			dateValid = true;
+		}
+		else
+		{
+			if (day !== 1) { dayPreviusSmall = day - 1; };
+			dateValid = true;
+		};
+/*/
 !(month === day === year === 1) ?                 
 	yearPreviusSmall = year-1:                    
 	!(month === day === 1 ?                       
@@ -42,7 +76,14 @@ let yearPreviusSmall  = year;
 				(day === 1) ?					  
 					monthPreviusSmall = day+29 :  
 			dayPreviusSmall = day - 1);
+//*/
+
+//console.writeln();
+//console.writeln(dateValid);
+//console.writeln();
 if (dateValid === true) {
-	console.writeln( `fecha ${ day }/${ month }/${ year } y la anterior es ${ dayPreviusSmall}/${monthPreviusSmall}/${yearPreviusSmall}.`);
+	console.writeln(`La fecha ` + day + `/` + month + `/` + year + ` y la anterior fecha es ` + dayPreviusSmall + `/` + monthPreviusSmall + `/` + yearPreviusSmall);
 }
-else (console.writeln( `No puedo hacer ese Cálculo con la fecha ${day}/${month}/${year} ya que no es válida`));
+else (console.writeln(`No puedo hacer ese Cálculo con la fecha ` + day + `/` + month + `/` + year + `ya que la fecha no es válida`));
+
+// console.readString('text');
