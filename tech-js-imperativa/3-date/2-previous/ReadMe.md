@@ -52,25 +52,32 @@
 >--- 
 > ## Algoritmo del día prévio. (aún no va y no sé porqué)
 >>--- 
->>~~~
->>if (!(year === month === day === 1))
->>  {
->>	  yearPreviusSmall = year - 1;
->>	  monthPreviusSmall = month - 1;
->>	  dayPreviusSmall = day + 29;
->>  }
->>else if (month === day === 1)
->>  {
->>	  dayPreviusSmall = day + 29 ;
->>	  monthPreviusSmall = month + 11;
->>  }
->>else if (day !== 1)
->>  {
->>	  dayPreviusSmall = day - 1;
->>  }
->>else{
->>	  ErrorInDate = true;
->>~~~
+>> ~~~
+>> if ( !( year === month === day === 1 ) )
+>> {
+>> 	if (year - 1 > 0 )
+>> 	{
+>> 		if (day === month === 1)
+>> 		{
+>> 			yearPreviusSmall = year - 1;
+>> 			dateValid = true;
+>> 		};
+>> 	}; // en otro caso llamar a método captura datos, return, o GOTO;
+>> 	if (month !== 1)
+>> 	{
+>> 		if (day === 1)
+>> 		{
+>> 			dayPreviusSmall = day + 29; monthPreviusSmall = month - 1;
+>> 			dateValid = true;
+>> 		}
+>> 		else
+>> 		{
+>> 			if (day !== 1) { dayPreviusSmall = day - 1; };
+>> 			dateValid = true;
+>> 		};
+>> 	};
+>> };
+>> ~~~
 >>---
 >---
 ---
