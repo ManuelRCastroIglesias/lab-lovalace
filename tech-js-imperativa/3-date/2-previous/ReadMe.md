@@ -50,18 +50,26 @@
 >> * María Paz López.  
 >> --- 
 >--- 
-> ## Algoritmo del día prévio. (aún no va)
+> ## Algoritmo del día prévio. (aún no va y no sé porqué)
 >>--- 
 >>~~~
->>Si  !(year  === month === day === 1) : Cambiamos el dia> >a (dia+29), el mes a (mes-1) y el año a (año-1);
->>Si  (dia === 1  y mes === 1)         : Cambiamos el dia> >a (dia+29), el mes a (mes-1);
->>Si  (dia !== 1  y mes !== 1)         : Cambiamos el dia> >a (dia-1);
->>Si  (year  === month === day === 1)  : Esta fecha rstá >>mal capturada.
->>
->>If    !(year  === month === day === 1){year  -= 1 ; >>month -= 1 ; day += 29}; // ¡Es el 01/01/01!
->>ElseIf (month === day === 1)          { day += 29 ; >>month -= 1 ;          }; // (year  !== 1)
->>ElseIf (day   === 1)                  {day   -= >>1 ;                       }; // (month !== 1)
->>Else   ErrorInDate = >true;                            >                     >  // (day   !== 1)  
+>>if (!(year === month === day === 1))
+>>  {
+>>	  yearPreviusSmall = year - 1;
+>>	  monthPreviusSmall = month - 1;
+>>	  dayPreviusSmall = day + 29;
+>>  }
+>>else if (month === day === 1)
+>>  {
+>>	  dayPreviusSmall = day + 29 ;
+>>	  monthPreviusSmall = month + 11;
+>>  }
+>>else if (day !== 1)
+>>  {
+>>	  dayPreviusSmall = day - 1;
+>>  }
+>>else{
+>>	  ErrorInDate = true;
 >>~~~
 >>---
 >---
