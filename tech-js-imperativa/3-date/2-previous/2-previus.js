@@ -19,7 +19,7 @@ const dayLargeValue = day <= 30 ;            // true
 const monthLargeValue = month <= 12 ;            // true
 const yearLargeValue = year <= 99 ;            // true
 
-const dateValid = (daySmallValue === monthSmallValue === yearSmallValue === dayLargeValue === monthLargeValue === yearLargeValue); /* sirve como prueba */
+let dateValid = !(daySmallValue === monthSmallValue === yearSmallValue === dayLargeValue === monthLargeValue === yearLargeValue); /* sirve como prueba */
 
 // ¡No sé como hacerlo sin Let! Me rindo.
 let dayPreviusSmall = day;    
@@ -33,17 +33,24 @@ if ( !( year === month === day === 1 ) )
 {
 	if (year - 1 > 0 )
 	{
-		yearPreviusSmall = year - 1;
+		if (day === month === 1)
+		{
+			yearPreviusSmall = year - 1;
+			dateValid = true;
+		};
+
 	}; // en otro caso llamar a método captura datos, return, o GOTO;
 	if (month !== 1)
 	{
 		if (day === 1)
 		{
 			dayPreviusSmall = day + 29; monthPreviusSmall = month - 1;
+			dateValid = true;
 		}
 		else
 		{
-			if (day !== 1) { dayPreviusSmall = day - 1;};
+			if (day !== 1) { dayPreviusSmall = day - 1; };
+			dateValid = true;
 		};
 	};
 };
@@ -58,9 +65,9 @@ if ( !( year === month === day === 1 ) )
 			dayPreviusSmall = day - 1);
 //*/
 
-console.writeln();
-console.writeln(dateValid);
-console.writeln();
+//console.writeln();
+//console.writeln(dateValid);
+//console.writeln();
 if (dateValid === true) {
 	console.writeln(`La fecha ` + day + `/` + month + `/` + year + ` y la anterior fecha es ` + dayPreviusSmall + `/` + monthPreviusSmall + `/` + yearPreviusSmall);
 }
