@@ -7,15 +7,17 @@ const console = new Console();
 /// Existe un error en los cálculos.
 // Se consideran todos los meses de 30 días.
 
-const day = console.readNumber( 'Escriba el dia ( 1-30): ' );
-const month = console.readNumber( 'Escriba el mes ( 1-12): ' );
-const year = console.readNumber( 'Escriba el año (01-99): ' );
-const daySmallvalue = day < 1;            // false
-const monthSmallvalue = month < 1;        // false
-const yearSmallvalue = year - 1 < 1;      // false
-const monthLargeValue = month > 12;       // false
-const dayLargeValue = day > 30;           // false
-const yearLargeValue = year > 99;         // false
+let dateDay   = + console.readNumber ( 'Escriba el dia ( 1-30): ' );
+let dateMonth = + console.readNumber ( 'Escriba el mes ( 1-12): ' );
+let dateYear  = + console.readNumber ( 'Escriba el año (01-99): ' );
+
+/*// // Lógica -- datePrevius -- ¡Esta lógica no es válida! (switch nueva lógica)
+const daySmallvalue    = (1 * dateDay  )     <= 1;     // false
+const monthSmallvalue  = (1 * dateMonth)     <= 1;     // false
+const yearSmallvalue   = (1 * dateYear ) - 1  < 1;     // false
+const monthLargeValue  = (1 * dateMonth)     > 12;     // false
+const dayLargeValue    = (1 * dateDay  )     > 30;     // false
+const yearLargeValue   = (1 * dateYear )     > 99;     // false
 
 const dateValid =
 	daySmallvalue ===
@@ -25,24 +27,82 @@ const dateValid =
 	monthLargeValue ===
 	yearLargeValue;
 
-/* sirve como prueba */
 // ¡No sé como hacerlo sin Let! Me rindo.
-let dayPreviusSmall = day;
-let monthPreviusSmall = month;
-let yearPreviusSmall = year;
+let dayPreviusSmall = dateDay;
+let monthPreviusSmall = dateMonth;
+let yearPreviusSmall = dateYear;
 
-// Lógica -- datePrevius --
-( month === day === year === 1 ) ?
-	yearPreviusSmall = year - 1 :
-	( month === day === 1 ?
-		( dayPreviusSmall = month - 1 ) :
-		( day === 1 ) ?
-			dayPreviusSmall = day + 29 :
-			dayPreviusSmall = day - 1 );
 
-dateValid ?
-	console.writeln( `La fecha ` + day + `/` + month + `/` + year + ` y la anterior fecha es ` + dayPreviusSmall + `/` + monthPreviusSmall + `/` + yearPreviusSmall ) :
-	console.writeln( `La fecha ` + day + `/` + month + `/` + year + ` No puedo hacer ese Cálculo o la fecha no es válida` );
-console.writeln( `La fecha ` + day + `/` + month + `/` + year + ` No puedo hacer ese Cálculo o la fecha no es válida` );
+( dateMonth === dateDay === dateYear === 1 ) ?
+	yearPreviusSmall = dateYear - 1 :
+	( dateMonth === dateDay === 1 ?
+		( monthPreviusSmall = dateMonth - 1 ) :
+		( dateDay === 1 ) ?
+			dayPreviusSmall = dateDay + 29 :
+			dayPreviusSmall = dateDay - 1 );
 
-// console.readString('text');
+/*/ // Nueva lógica.
+
+let dateValid = true;
+let previusYear = 1;
+let previusMonth = 1;
+let previusDay = 1;
+
+// Check if the date is the New Year’s Day or is a invalid date (01/01/01).
+	// The first New Year’s Day d.C.
+	// New Year’s Day
+	// The first day of the Month
+	// On any other day.
+
+if ( dateYear === dateMonth === dateDay === 1 )
+{
+	dateValid = false;
+}
+if ( dateMonth === dateDay === 1 );
+	{
+		previusYear = dateYear - 1;
+		previusMonth = dateMonth - 1;
+		previusDay + 29;
+	}
+if ( dateDay === 1 )
+{
+	previusMonth = dateMonth - 1;
+	previusDay + 29;
+}
+else if ( dateDay !== 1 )
+{
+	previusDay - 1;
+};
+
+
+//( 1 !== dateYear ) ? previusYear = dateYear : dateValid = false ;
+
+//	// Check if the date is the first of the Month or is New Year’s Day.
+//(1 === dateMonth ) ? previusMonth  - 1 : previusMonth = dateMonth * 1 ;
+
+//	// Check if the date is the first of the Month or it's not.
+//(1 === dateDay   ) ? previusDay   + 29 : previusDay   = dateDay   - 1 ;
+
+
+//*/
+
+(dateValid === true) ?
+	console.writeln( `La fecha ${ dateDay }/${ dateMonth }/${ dateYear } y la fecha anterior es ${ previusDay }/${ previusMonth }/${ previusYear }.` ) :
+
+	console.writeln( `La fecha ` + dateDay + `/` + dateMonth + `/` + dateYear + ` No puedo hacer ese Cálculo o la fecha no es válida` );
+
+//*// // Codigo Refactoring for searh logic error.
+
+console.writeln();
+console.writeln( dateValid);
+console.writeln();
+console.writeln( dateDay );
+console.writeln( dateMonth );
+console.writeln( dateYear );
+console.writeln();
+console.writeln( previusDay );
+console.writeln( previusMonth );
+console.writeln( previusYear );
+console.writeln();
+
+//*/
