@@ -18,6 +18,8 @@ const yearSmallvalue = year < 0; // false
 const yearLargeValue = year > 99; // false
 /* con la misma lógica se pueden calcular otros valores. */
 
+// !( ( ( ( (false||false) ||false) ||false) ||false) ||false)  ---> is false if any is true.
+// La retaíla de paréntesis es para forzar al navegador (o intérprete) a evaluar  toda la expresión ¡por si las moscas!
 let dateValid2 =
 1 * (daySmallvalue ===
     dayLargeValue ===
