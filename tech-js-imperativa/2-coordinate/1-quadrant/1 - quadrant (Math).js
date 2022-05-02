@@ -23,7 +23,7 @@ const console = new Console();
     ( XY ) = ( Xi + Xi + Yi );                                             //
 on_XY =                                                                    //
     ( XY ) === +3 ? " está en el primer cuadrante" :                       //
-    ( XY ) === -1 ? " está en el segundo cuadrante" :                      //
+    ( XY ) === -1 ? " está en el segundo cuadrante":                       //
     ( XY ) === -3 ? " está en el tercer cuadrante" :                       //
     ( XY ) === -1 ? " está en el cuarto cuadrante" : false;                //
 txt_on_XY_axis =                                                           //
