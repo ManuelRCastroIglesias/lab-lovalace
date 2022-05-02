@@ -30,7 +30,7 @@ txt_on_XY_axis =                                                           //
     ( X === 0 ) && ( Y === 0 ) ? " está sobre el origen de coordenadas" :  //
     ( X !== 0 ) && ( Y !== 0 ) ? on_XY :                                   //
     ( X === 0 ) && ( Y !== 0 ) ? " está sobre el eje de abscisa" :         //
-                ( X !== 0 ) && ( Y === 0 ) ? " está sobre el eje de ordenadas" : "";   //
+    ( X !== 0 ) && ( Y === 0 ) ? " está sobre el eje de ordenadas" : "";   //
 /// -----------------------------------------------------------------------//
 console.writeln( `La coordenada (${ X }, ${ Y })"${ txt_on_XY_axis }.` );  //
 console.writeln();                                                         //
