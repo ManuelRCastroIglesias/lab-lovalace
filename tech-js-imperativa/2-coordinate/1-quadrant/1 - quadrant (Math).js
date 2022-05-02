@@ -17,6 +17,7 @@ const console = new Console();
     X = + console.readNumber( "Dame la abscisa de la coordenada: " );      //
     Y = + console.readNumber( "Dame la ordenada de la coordenada: " );     //
 console.writeln();                                                         //
+/// -----------------------------------------------------------------------//
     ( Xi ) = ( X > 0 ) ? 1 : ( X < 0 ) ? -1 : 0;                           //
     ( Yi ) = ( Y > 0 ) ? 1 : ( Y < 0 ) ? -1 : 0;                           //
     ( XY ) = ( Xi + Xi + Yi );                                             //
@@ -31,6 +32,7 @@ txt_on_XY_axis =                                                           //
     ( X === 0 ) && ( Y !== 0 ) ? " está sobre el eje de abscisa" :         //
     ( X !== 0 ) && ( Y === 0 ) ? " está sobre el eje de ordenadas" : "";   //
 console.writeln( `La coordenada (${ X }, ${ Y })"${ txt_on_XY_axis }.` );  //
+/// -----------------------------------------------------------------------//
 console.writeln();                                                         //
 /// -----------------------------------------------------------------------//
 
