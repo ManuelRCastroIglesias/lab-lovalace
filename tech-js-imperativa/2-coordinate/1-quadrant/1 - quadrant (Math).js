@@ -4,9 +4,9 @@ const console = new Console();
 /// <Autor:> Manuel Rosendo Castro Iglesias.                               //
 /// 0-onAxes\1-quadrant (v.Math)                                           //
 /// -----------------------------------------------------------------------//
-    let X=0;    // abcissa                                                 //
+    let X  = 0; // abcissa                                                 //
     let Xi = 0; // relative abcissa                                        //
-    let Y = 0;  // ordinate                                                //
+    let Y  = 0; // ordinate                                                //
     let Yi = 0; // relative ordinate                                       //
     let XY = 0; // quadrant                                                //
     // first  quadrant ( I   ) = +++ ;                                     //
@@ -28,7 +28,7 @@ on_XY =                                                                    //
     ( XY ) === -1 ? " está en el cuarto cuadrante" : false;                //
 txt_on_XY_axis =                                                           //
     ( X === 0 ) && ( Y === 0 ) ? " está sobre el origen de coordenadas" :  //
-    ( X !== 0 ) && ( Y !== 0 ) ? on_XY :                                   //
+    ( X !== 0 ) && ( Y !== 0 ) ?   on_XY :                                 //
     ( X === 0 ) && ( Y !== 0 ) ? " está sobre el eje de abscisa" :         //
     ( X !== 0 ) && ( Y === 0 ) ? " está sobre el eje de ordenadas" : "" ;  //
 /// -----------------------------------------------------------------------//
