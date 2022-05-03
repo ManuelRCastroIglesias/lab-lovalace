@@ -23,7 +23,7 @@ do
 {
 	day = console.readNumber( 'Escriba un día (1-30): ' );
 }
-while ( day <= 1 || day >= 30 );  // ¿Añadir verificación dias 31 o 28/29? ¡Interesante!
+while ( day <= 1 || day >= 30 );    // ¿Añadir verificación dias 31 o 28/29? ¡Interesante!
 do
 {
 	month = console.readNumber( 'Escriba un mes (1-12): ' );
