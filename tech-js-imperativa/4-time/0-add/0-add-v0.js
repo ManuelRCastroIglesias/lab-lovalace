@@ -1,24 +1,24 @@
 const { Console } = require("console-mpds");
 const console = new Console();
-/// ·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-
-/// Autor:  Manuel Rosendo Castro Iglesias.
-/// Programming exercise with JavaScript, with the use of If(...) {... }, For(...) {... },
-///     Do while (...) {... }, Swith(...) {... }, and Comments to; //*// toggle /*/ code //*/.
-/// ·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-
-/// Copyright(C) < 2020 > <Manuel Rosendo Castro Iglesias>
-/// 	This program is free software: you can redistribute it and/or modify
-/// 	it under the terms of the GNU General Public License as published by
-/// 	the Free Software Foundation, either version 3 of the License, or
-/// 	(at your option) any later version.
-/// 
-/// 	This program is distributed in the hope that it will be useful,
-/// 	but WITHOUT ANY WARRANTY; without even the implied warranty of
-/// 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-/// 	GNU General Public License for more details.
-/// 
-/// 	You should have received a copy of the GNU General Public License
-/// 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
-/// ·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-
+/// “·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·
+/// “Autor:  Manuel Rosendo Castro Iglesias.                                                     ”
+/// “Programming exercise with JavaScript, with the use of If(...) {... }, For(...) {... },      ”
+/// “    Do while (...) {... }, Swith(...) {... }, and Comments to; //*// toggle /*/ code //*/.  ”
+/// “·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·
+/// “Copyright(C) < 2020 > <Manuel Rosendo Castro Iglesias>                                      ”
+/// “	This program is free software: you can redistribute it and/or modify                     ”
+/// “	it under the terms of the GNU General Public License as published by                     ”
+/// “	the Free Software Foundation, either version 3 of the License, or                        ”
+/// “	(at your option) any later version.                                                      ”
+/// “                                                                                            ”
+/// “	This program is distributed in the hope that it will be useful,                          ”
+/// “	but WITHOUT ANY WARRANTY; without even the implied warranty of                           ”
+/// “	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                            ”
+/// “	GNU General Public License for more details.                                             ”
+/// “                                                                                            ”
+/// “	You should have received a copy of the GNU General Public License                        ”
+/// “	along with this program.  If not, see <https://www.gnu.org/licenses/>.                   ”
+/// “·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·
 /// Contiene cuatro versiones. Añadir o quitar “/” al inicio de las líneas nº 24 y nº 78
 
 /*// // TODO: 2ª refactorización. ¡Cambiar (-1) por otra cosa que sirva mejor!
@@ -67,13 +67,13 @@ for (i=1; i>2; i++){
 //*/ // Final 2ª refatorización.
 // TODO: refactorizar eliminando variables ¿es necesario? Pero creo que esto es lo más legible.
 
-const add_s = first_s + twoth_s;
-const residue_s = add_s % 60;
-const min_From_s = (add_s - residue_s) / 60;
+	const add_s = first_s + twoth_s;
+	const residue_s = add_s % 60;
+	const min_From_s = (add_s - residue_s) / 60;
 
-const add_min = first_min + twoth_min + min_From_s;
-const residue_min = add_min % 60;
-const hr_From_min = (add_min - residue_min) / 60;
+	const add_min = first_min + twoth_min + min_From_s;
+	const residue_min = add_min % 60;
+	const hr_From_min = (add_min - residue_min) / 60;
 
 //*// Para intecambiar código añadir barra al inicio. Funciona en Visual Studio * 
 	/*/
