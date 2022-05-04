@@ -15,7 +15,7 @@ const yearNow = 2022 // para verificar aún falta llegar a funciones de fecha y 
 
 const day = 1;
 const month = 1;
-const year =;
+const year =1;
 
 	// No es necesario añadir " + " para forzar tipo ya que solo acepta enteros
 	// Si este comportamiento cambia en el futuro será neesario ver posible solución.
