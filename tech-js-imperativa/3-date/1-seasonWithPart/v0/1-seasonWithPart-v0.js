@@ -12,7 +12,7 @@
 const yearNow = 2022 
 let myDay = 1;
 let month = 1;
-let annum =1;
+let annum = 1;
 /// ----------------------------------------------------------------------//
 do{
 	myDay = console.readNumber( 'Escriba un día (1-30): ' );}
