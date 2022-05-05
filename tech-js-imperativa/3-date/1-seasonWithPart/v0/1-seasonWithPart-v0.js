@@ -8,22 +8,17 @@
 	/// <Titulo: ### 1-seasonWithPart/v0/ >                               //
 	/// ------------------------------------------------------------------//
 }   /// Créditos:
-
+/// ----------------------------------------------------------------------//
 const yearNow = 2022 
 let myDay = 1;
 let month = 1;
 let annum = 1;
 /// ----------------------------------------------------------------------//
-do{
-	myDay = console.readNumber( 'Escriba un día (1-30): ' );}
+do { console.writeln(); myDay = console.readNumber( 'Escriba un día (1-30): ' );}
 while ( myDay < 1 || myDay >= 30 );
-do {
-	console.writeln();
-	month = console.readNumber( 'Escriba un mes (1-12): ' );}
+do { console.writeln(); month = console.readNumber( 'Escriba un mes (1-12): ' );}
 while ( month < 1 || month > 12 );
-do {
-	console.writeln();
-	annum = console.readNumber( 'Escriba un año (… … … …): ' );}
+do { console.writeln(); annum = console.readNumber( 'Escriba un año (… … … …): ' );}
 while (annum < 1 || annum > yearNow);
 	console.writeln();
 /// ----------------------------------------------------------------------//
