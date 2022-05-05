@@ -33,26 +33,26 @@ for (i = PLAYBACK; i === 0; i--) {
     do {
         do {
             txtData = console.writeln(`Introduce el ${txtExit} de la fracción: `);
+            if (PLAYBACK % 2 === 0) {
+                numerator = console.readNumber(`Introduce el numerador : `);
+            }else {
+                denominator = console.readNumber(`Introduce el denominador : `);
+            }
         } while (txtData < 0);
-        if (PLAYBACK % 2 === 0) {
-            numerator = console.readNumber(`Introduce el numerador : `);
-        }
-        else {
-            denominator = console.readNumber(`Introduce el denominador : `);
-        }
-        searchGCD = numerator % denominator;
-        while (searchGCD !== 0) {
+        if (numerator > denominator) {
+            searchGCD = numerator % denominator;
+        }else {
+            searchGCD = denominator % numerator;
+        } while (searchGCD !== 0) {
             if (searchGCD > 2) {
-                // The search was not successful
+                // The search was not successful, but is even.
                 searchGCD = numerator % denominator;
-            } // UNDONE: GCD Search is even.
-            else {
-                // The search was successful
-                // UNDONE: Print the solution.
+            }else {
+                // The search was not successful, but is odd.
                 searchGCD = denominator % numerator;
-            } // UNDONE: GCD Search is odd.
-        } // UNDONE: GCD Search.
-    } while (PLAYBACK > 1); // UNDONE: Data capture.
+            } // UNDONE: GCD Search.
+        }// UNDONE: Print the solution.
+    } while (PLAYBACK > 1);
 } // #SECTION: Program.
 
 console.writeln(FAREWELL);
