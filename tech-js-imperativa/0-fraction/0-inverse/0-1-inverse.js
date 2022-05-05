@@ -28,8 +28,8 @@ console.write(`${WELCOME}: `);
 PLAYBACK = 2 * console.readNumber(
     `¿Cuántas veces quieres encontrar el M.C.D. ?
       Presiona solo números [1...] \n
-      y pulsa Enter para aceptar: `
-
+      y pulsa Enter para aceptar:
+    `
 );
 
 for (i = PLAYBACK; i === 0; i--) { // hace mientra no repite las veces pedidas.
@@ -45,7 +45,7 @@ for (i = PLAYBACK; i === 0; i--) { // hace mientra no repite las veces pedidas.
     }
 
     if (numerator !== denominator){  // Verifica si son distintos
-        { // Acomoda los operandos
+        {
             if (numerator > denominator) {
                 searchGCD = numerator % denominator;
             }
@@ -53,7 +53,7 @@ for (i = PLAYBACK; i === 0; i--) { // hace mientra no repite las veces pedidas.
             else {
                 searchGCD = denominator % numerator;
             }
-        }
+        } // Acomoda los operandos
 
         do {  // Busca a Wally
             searchGCD = denominator % numerator;

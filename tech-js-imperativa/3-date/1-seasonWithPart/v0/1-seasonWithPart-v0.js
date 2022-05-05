@@ -88,18 +88,18 @@ const mySeasonText =
 		 month ===  1 ?  aboutEarly_Text + winterSeasonText: 
 		 month ===  2 ?  aboutMiddleText + winterSeasonText: 
 		 month ===  3 ?  
-			(day < 21 ? aboutLate_Text + winterSeasonText : aboutEarly_Text + springSeasonText):
+			(day < 21 ?  aboutLate_Text  + winterSeasonText: aboutEarly_Text + springSeasonText):
 		 month ===  4 ?  aboutEarly_Text + springSeasonText: 
 		 month ===  5 ?  aboutMiddleText + springSeasonText: 
 		 month ===  6 ?  
-			(day < 21 ? aboutLate_Text + springSeasonText : aboutEarly_Text + summerSeasonText):
+			(day < 21 ?  aboutLate_Text  + springSeasonText: aboutEarly_Text + summerSeasonText):
 		 month ===  7 ?  aboutEarly_Text + summerSeasonText: 
 		 month ===  8 ?  aboutMiddleText + summerSeasonText: 
 		 month ===  9 ?  
-			(day < 21 ? aboutLate_Text + summerSeasonText : aboutEarly_Text + autumnSeasonText):
+			(day < 21 ?  aboutLate_Text  + summerSeasonText: aboutEarly_Text + autumnSeasonText):
 		 month === 10 ?  aboutEarly_Text + autumnSeasonText: 
 		 month === 11 ?  aboutMiddleText + autumnSeasonText: 
-			(day < 21 ? aboutEarly_Text + summerSeasonText : aboutLate_Text + winterSeasonText);
+			(day < 21 ?  aboutLate_Text  + autumnSeasonText: aboutEarly_Text + winterSeasonText);
 
 console.writeln(`${ mySeason_Day }${ mySeason_Month }${ mySeason_Year }${ mySeasonText }.`);
 
