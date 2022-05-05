@@ -24,36 +24,57 @@ const console = new Console();
     let FAREWELL = `... ¡Hasta la próxima! ...`;
     let txtData = 0;
 
-console.writeln(WELCOME);
-PLAYBACK = 2 * console.readNumber(`¿Cuantas veces quieres repetir la cuenta? [1...] : `);
+console.write(`${WELCOME}: `);
+PLAYBACK = 2 * console.readNumber(
+    `¿Cuántas veces quieres encontrar el M.C.D. ?
+      Presiona solo números [1...] \n
+      y pulsa Enter para aceptar: `
 
+);
 
+for (i = PLAYBACK; i === 0; i--) { // hace mientra no repite las veces pedidas.
 
-for (i = PLAYBACK; i === 0; i--) {
-    do {
-        do {
-            txtData = console.writeln(`Introduce el ${txtExit} de la fracción: `);
-            if (PLAYBACK % 2 === 0) {
-                numerator = console.readNumber(`Introduce el numerador : `);
-            }else {
-                denominator = console.readNumber(`Introduce el denominador : `);
-            }
-        } while (txtData < 0);
-        if (numerator > denominator) {
-            searchGCD = numerator % denominator;
-        }else {
-            searchGCD = denominator % numerator;
-        } while (searchGCD !== 0) {
-            if (searchGCD > 2) {
-                // The search was not successful, but is even.
+    { txtData = console.writeln(`Introduce el ${txtExit} de la fracción: `);
+        if (PLAYBACK % 2 === 0) {
+            numerator = console.readNumber(`Introduce el numerador : `);
+        }
+
+        else {
+            denominator = console.readNumber(`Introduce el denominador : `);
+        }
+    }
+
+    if (numerator !== denominator){  // Verifica si son distintos
+        { // Acomoda los operandos
+            if (numerator > denominator) {
                 searchGCD = numerator % denominator;
-            }else {
-                // The search was not successful, but is odd.
+            }
+
+            else {
                 searchGCD = denominator % numerator;
-            } // UNDONE: GCD Search.
-        }// UNDONE: Print the solution.
-    } while (PLAYBACK > 1);
-} // #SECTION: Program.
+            }
+        }
+
+        do {  // Busca a Wally
+            searchGCD = denominator % numerator;
+            while (numerator > denominator) {
+                searchGCD = numerator % denominator;
+            }
+
+            while (denominator > numerator); {
+                searchGCD = denominator % numerator;
+            }
+        } while (searchGCD !== 1);
+
+    } // Acomoda los operandos
+
+    // UNDONE: Print the solution.
+
+} // hace mientra no repite las veces pedidas.
+
+
+
+
 
 console.writeln(FAREWELL);
 
