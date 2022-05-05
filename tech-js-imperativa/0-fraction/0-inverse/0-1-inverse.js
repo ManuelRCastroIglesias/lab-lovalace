@@ -1,109 +1,60 @@
+const { Console } = require("console-mpds");
+const console = new Console();
+{// #SECTION: Credits.
+/// --------------------------------------------------------------------------------------------------------------/
+///  https://github.com/USantaTecla-0-domains/0-simpleDomains/blob/master/docs/5-units.md#0-fraction0-1-inverse   /
+/// --------------------------------------------------------------------------------------------------------------/
+///                                  <Autor:> Manuel Rosendo Castro Iglesias.                                     /
+///                                    <Titulo:> 0-fraction/0-1-inverse)                                          /
+/// --------------------------------------------------------------------------------------------------------------/
+///                          Simplificando la fracción mediante el máximo común divisor                           /
+///	        --(visto en el "Recursividad en la Ciencia" del tema "Patrones" del módulo de Fundamentos)--          /
+/// --------------------------------------------------------------------------------------------------------------/
+}// #SECTION: Credits.
 
-////  https://github.com/USantaTecla-0-domains/0-simpleDomains/blob/master/docs/5-units.md#0-fraction0-1-inverse
-//// ----------------------------------------------------------------------//
-/**/     const { Console } = require("console-mpds");                      //
-/**/     const console = new Console();                                    //
-//// Ésta función solo acepta (por ahora) números y redondea hacia el 0    //
-///            <Autor:> Manuel Rosendo Castro Iglesias.                    //
-///              <Titulo:> 0-fraction/0-1-inverse)                         //
-/// -----------------------------------------------------------------------//
-///    Simplificando la fracción mediante el máximo común divisor          //
-///			(visto en el "Recursividad en la Ciencia";                     //
-///			del tema "Patrones" del módulo de Fundamento)--;//             //
-/// -----------------------------------------------------------------------//
+    const WELCOME = ` Bienvenido al buscador de M.C.D.`;
+    const xTx_NUMERATOR = `numerador`;
+    const TxT_DENOMINATOR = `denominador`;
+    let txtCuestion = ``;
+    let PLAYBACK = 2;
+    let searchGCD = 0;
+    let numerator = 1;
+    let denominator = 1;
+    let txtError = `Esto es un error. No válido `;
+    let FAREWELL = `... ¡Hasta la próxima! ...`;
+    let txtData = 0;
 
-
-/*//
-
-gcd(int a, int b){
-    if (a == b)
-        return a;
-    else if (a > b)
-        return gcd(a - b, b);
-    else
-        return gcd(a, b - a);
-
-numerator and denominator
-
-}
-
-let num;
-let saidB;
-let gdc;
+console.writeln(WELCOME);
+PLAYBACK = 2 * console.readNumber(`¿Cuantas veces quieres repetir la cuenta? [1...] : `);
 
 
 
-do {
-    sideA *1 
-
-    gdc = sideA === saidB  ?
-} while (true);
-
-//*/
-
-const TERMINATORsaid = ` Hello Baby! ...`;
-const xTx_NUMERATOR = `numerador`;
-const TxT_DENOMINATOR = `denominador`;
-let remakes = 2;
-let whereIsWally = 0;
-let upTop;
-let goDown;
-let aucH = `No válido `;
-let WallyGator = `...see you later alligator...`;
-let tempDate = 1;
-
-
-console.writeln(TERMINATORsaid);
-remakes = 2 * console.readNumber('¿Cuantas veces quieres repetir la cuenta? : ');
-{
-    for (i = remakes; i === 0; i--) {
+for (i = PLAYBACK; i === 0; i--) {
+    do {
         do {
-            if (remakes % 2 === 0) {
-                // procesando
-            }
+            txtData = console.writeln(`Introduce el ${txtExit} de la fracción: `);
+        } while (txtData < 0);
+        if (PLAYBACK % 2 === 0) {
+            numerator = console.readNumber(`Introduce el numerador : `);
+        }
+        else {
+            denominator = console.readNumber(`Introduce el denominador : `);
+        }
+        searchGCD = numerator % denominator;
+        while (searchGCD !== 0) {
+            if (searchGCD > 2) {
+                // The search was not successful
+                searchGCD = numerator % denominator;
+            } // UNDONE: GCD Search is even.
             else {
-                // Otra cosa: se matiene por el efecto educativo;
-            }
-            tempDate = console.readNumber('Introduce el ${txtExit} de la fracción: ');
-        } while (whereIsWally < 1);
-    }
-}
-console.writeln(WallyGator);
+                // The search was successful
+                // UNDONE: Print the solution.
+                searchGCD = denominator % numerator;
+            } // UNDONE: GCD Search is odd.
+        } // UNDONE: GCD Search.
+    } while (PLAYBACK > 1); // UNDONE: Data capture.
+} // #SECTION: Program.
 
-/// -----------------------------------------------------------------------//
+console.writeln(FAREWELL);
 
-
-
-
-/*//
-
-const TERMINATORsaid = ` Hello Baby! ...`;
-const xTx_NUMERATOR = `numerador`;
-const TxT_DENOMINATOR = `denominador`;
-let remakes = 2;
-let whereIsWally = 0;
-let upTop;
-let goDown;
-let aucH = `No válido `;
-let WallyGator = `...see you later alligator...`;
-let tempDate = 1;
-
-
-console.writeln(TERMINATORsaid);
-remakes = 2 * console.readNumber('¿Cuantas veces quieres repetir la cuenta? : ');
-{
-    for (i = remakes; i === 0; i--) {
-        do {
-            if (remakes % 2 === 0) {
-                // procesando
-            }
-            else {
-                // Otra cosa: se matiene por el efecto educativo;
-            }
-            tempDate = console.readNumber('Introduce el ${txtExit} de la fracción: ');
-        } while (whereIsWally < 1);
-    }
-}
-console.writeln(WallyGator);
-
-/// -----------------------------------------------------------------------//
+/// -------------------------------------------------------------------------------------------------------------//
