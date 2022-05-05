@@ -28,49 +28,29 @@ while (year < 1 || year > yearNow);
 	console.writeln();
 
 
-const aboutEarlyTxt   = " cae a principios";
-const aboutMiddleTxt = " cae a mediados";
-const aboutLateTxt    = " cae a finales";
+const EarlyTxt   = " cae a principios";
+const MiddleTxt = " cae a mediados";
+const LateTxt    = " cae a finales";
 
-const winterSeasonTxt = " del Invierno";
-const springSeasonTxt = " de la Primavera";
-const summerSeasonTxt = " del Verano";
-const autumnSeasonTxt = " del Otoño";
+const winter = " del Invierno";
+const spring = " de la Primavera";
+const summer = " del Verano";
+const autumn = " del Otoño";
 
-const mySeasonTxt =
-	month === 1 ? (day < 21 ?
-		aboutEarlyTxt  + winterSeasonTxt :
-		aboutMiddleTxt + winterSeasonTxt):
-	month === 2 ? (day < 21 ?
-		aboutMiddleTxt + winterSeasonTxt :
-		aboutLateTxt   + winterSeasonTxt):
-	monh === 3 ? (day  < 21 ?
-		aboutLateTxt   + winterSeasonTxt :
-		aboutEarlyTxt  + springSeasonTxt):
-	month === 4 ? (day < 21 ?
-		aboutEarlyTxt  + springSeasonTxt :
-		aboutMiddleTxt + springSeasonTxt):
-	month === 5 ? (day < 21 ?
-		aboutMiddleTxt + springSeasonTxt :
-		aboutLateTxt   + springSeasonTxt):
-	month === 6 ? (day < 21 ?
-		aboutLateTxt   + springSeasonTxt :
-		aboutEarlyTxt  + summerSeasonTxt):
-	month === 7 ? (day < 21 ?
-		aboutEarlyTxt  + summerSeasonTxt :
-		aboutMiddleTxt + summerSeasonTxt):
-	month === 8 ? (day < 21 ?
-		aboutMiddleTxt + summerSeasonTxt :
-		aboutLateTxt   + summerSeasonTxt):
-	month === 9 ? (day < 21 ?
-		aboutLateTxt   + summerSeasonTxt :
-		aboutEarlyTxt  + autumnSeasonTxt):
-	month === 10 ? (day < 21 ?
-		aboutEarlyTxt + autumnSeasonTxt :
-	month === 11 ? (day < 21 ?
-		aboutLateTxt + autumnSeasonTxt :
-		aboutEarlyTxt + winterSeasonTxt);
+const my =
+	month ===  1 ? (day < 21 ? EarlyTxt  + winter : MiddleTxt + winter):
+	month ===  2 ? (day < 21 ? MiddleTxt + winter : LateTxt   + winter):
+	month ===  3 ? (day < 21 ? LateTxt   + winter : EarlyTxt  + spring):
+	month ===  4 ? (day < 21 ? EarlyTxt  + spring : MiddleTxt + spring):
+	month ===  5 ? (day < 21 ? MiddleTxt + spring : LateTxt   + spring):
+	month ===  6 ? (day < 21 ? LateTxt   + spring : EarlyTxt  + summer):
+	month ===  7 ? (day < 21 ? EarlyTxt  + summer : MiddleTxt + summer):
+	month ===  8 ? (day < 21 ? MiddleTxt + summer : LateTxt   + summer):
+	month ===  9 ? (day < 21 ? LateTxt   + summer : EarlyTxt  + autumn):
+	month === 10 ? (day < 21 ? EarlyTxt  + autumn : MiddleTxt + autumn):
+	month === 11 ? (day < 21 ? MiddleTxt + autumn : LateTxt   + autumn):
+	month === 12 ?             LateTxt   + autumn : EarlyTxt  + winter ;
 
-console.writeln(`El día ${day} del ${month} del año ${year}/${mySeasonTxt}.`);
+console.writeln(`El día ${day} del ${month} del año ${year}/${my}.`);
 
-//    aboutMiddleTxt + autumnSeasonTxt :
+//    MiddleTxt + autumn :
