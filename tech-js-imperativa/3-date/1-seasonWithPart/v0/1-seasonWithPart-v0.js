@@ -52,5 +52,3 @@ const my =
 	month === 12 ?             LateTxt   + autumn : EarlyTxt  + winter ;
 
 console.writeln(`El día ${day} del ${month} del año ${year}/${my}.`);
-
-//    MiddleTxt + autumn :
