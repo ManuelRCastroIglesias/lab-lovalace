@@ -47,7 +47,7 @@ const seassonPart =
 	month === 09 ? (myDay < 21 ? LATEST + SUMMER : EARLIE + AUTUMN):
 	month === 10 ? (myDay < 21 ? EARLIE + AUTUMN : MIDDLE + AUTUMN):
 	month === 11 ? (myDay < 21 ? MIDDLE + AUTUMN : LATEST + AUTUMN):
-	month === 12 ? /*       */ LATEST + AUTUMN : EARLIE + WINTER;
+	month === 12 ? /*         */ LATEST + AUTUMN : EARLIE + WINTER;
 /// ----------------------------------------------------------------------//
 console.writeln(`\tEl día ${myDay} del ${month} del año ${annum}${seassonPart}.`);
 /// ----------------------------------------------------------------------//
