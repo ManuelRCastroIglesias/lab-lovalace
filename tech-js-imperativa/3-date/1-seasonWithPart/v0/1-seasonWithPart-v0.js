@@ -10,44 +10,44 @@
 }   /// Créditos:
 
 const yearNow = 2022 
-let day = 1;
+let myDay = 1;
 let month = 1;
-let year =1;
+let annum =1;
 /// ----------------------------------------------------------------------//
 do{
-	day = console.readNumber( 'Escriba un día (1-30): ' );}
-while ( day < 1 || day >= 30 );
+	myDay = console.readNumber( 'Escriba un día (1-30): ' );}
+while ( myDay < 1 || myDay >= 30 );
 do {
 	console.writeln();
 	month = console.readNumber( 'Escriba un mes (1-12): ' );}
 while ( month < 1 || month > 12 );
 do {
 	console.writeln();
-	year = console.readNumber( 'Escriba un año (… … … …): ' );}
-while (year < 1 || year > yearNow);
+	annum = console.readNumber( 'Escriba un año (… … … …): ' );}
+while (annum < 1 || annum > yearNow);
 	console.writeln();
 /// ----------------------------------------------------------------------//
-const EarlyTxt = " cae a principios";
-const MiddleTxt = " cae a mediados";
-const LateTxt = " cae a finales";
-const winter = " del Invierno";
-const spring = " de la Primavera";
-const summer = " del Verano";
-const autumn = " del Otoño";
+const EARLIE = " cae a principios";
+const MIDDLE = " cae a mediados";
+const LATEST = " cae a finales";
+const WINTER = " del Invierno";
+const SPRING = " de la Primavera";
+const SUMMER = " del Verano";
+const AUTUMN = " del Otoño";
 /// ----------------------------------------------------------------------//
 const seassonPart =
-	month === 01 ? (day < 21 ? EarlyTxt  + winter : MiddleTxt + winter):
-	month === 02 ? (day < 21 ? MiddleTxt + winter : LateTxt   + winter):
-	month === 03 ? (day < 21 ? LateTxt   + winter : EarlyTxt  + spring):
-	month === 04 ? (day < 21 ? EarlyTxt  + spring : MiddleTxt + spring):
-	month === 05 ? (day < 21 ? MiddleTxt + spring : LateTxt   + spring):
-	month === 06 ? (day < 21 ? LateTxt   + spring : EarlyTxt  + summer):
-	month === 07 ? (day < 21 ? EarlyTxt  + summer : MiddleTxt + summer):
-	month === 08 ? (day < 21 ? MiddleTxt + summer : LateTxt   + summer):
-	month === 09 ? (day < 21 ? LateTxt   + summer : EarlyTxt  + autumn):
-	month === 10 ? (day < 21 ? EarlyTxt  + autumn : MiddleTxt + autumn):
-	month === 11 ? (day < 21 ? MiddleTxt + autumn : LateTxt   + autumn):
-	month === 12 ? /*       */ LateTxt   + autumn : EarlyTxt  + winter;
+	month === 01 ? (myDay < 21 ? EARLIE + WINTER : MIDDLE + WINTER):
+	month === 02 ? (myDay < 21 ? MIDDLE + WINTER : LATEST + WINTER):
+	month === 03 ? (myDay < 21 ? LATEST + WINTER : EARLIE + SPRING):
+	month === 04 ? (myDay < 21 ? EARLIE + SPRING : MIDDLE + SPRING):
+	month === 05 ? (myDay < 21 ? MIDDLE + SPRING : LATEST + SPRING):
+	month === 06 ? (myDay < 21 ? LATEST + SPRING : EARLIE + SUMMER):
+	month === 07 ? (myDay < 21 ? EARLIE + SUMMER : MIDDLE + SUMMER):
+	month === 08 ? (myDay < 21 ? MIDDLE + SUMMER : LATEST + SUMMER):
+	month === 09 ? (myDay < 21 ? LATEST + SUMMER : EARLIE + AUTUMN):
+	month === 10 ? (myDay < 21 ? EARLIE + AUTUMN : MIDDLE + AUTUMN):
+	month === 11 ? (myDay < 21 ? MIDDLE + AUTUMN : LATEST + AUTUMN):
+	month === 12 ? /*       */ LATEST + AUTUMN : EARLIE + WINTER;
 /// ----------------------------------------------------------------------//
-console.writeln(`\tEl día ${day} del ${month} del año ${year}${seassonPart}.`);
+console.writeln(`\tEl día ${myDay} del ${month} del año ${annum}${seassonPart}.`);
 /// ----------------------------------------------------------------------//
