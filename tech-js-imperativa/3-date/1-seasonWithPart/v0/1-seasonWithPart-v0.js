@@ -36,15 +36,15 @@ const summer = " del Verano";
 const autumn = " del Otoño";
 /// ----------------------------------------------------------------------//
 const seassonPart =
-	month ===  1 ? (day < 21 ? EarlyTxt  + winter : MiddleTxt + winter):
-	month ===  2 ? (day < 21 ? MiddleTxt + winter : LateTxt   + winter):
-	month ===  3 ? (day < 21 ? LateTxt   + winter : EarlyTxt  + spring):
-	month ===  4 ? (day < 21 ? EarlyTxt  + spring : MiddleTxt + spring):
-	month ===  5 ? (day < 21 ? MiddleTxt + spring : LateTxt   + spring):
-	month ===  6 ? (day < 21 ? LateTxt   + spring : EarlyTxt  + summer):
-	month ===  7 ? (day < 21 ? EarlyTxt  + summer : MiddleTxt + summer):
-	month ===  8 ? (day < 21 ? MiddleTxt + summer : LateTxt   + summer):
-	month ===  9 ? (day < 21 ? LateTxt   + summer : EarlyTxt  + autumn):
+	month === 01 ? (day < 21 ? EarlyTxt  + winter : MiddleTxt + winter):
+	month === 02 ? (day < 21 ? MiddleTxt + winter : LateTxt   + winter):
+	month === 03 ? (day < 21 ? LateTxt   + winter : EarlyTxt  + spring):
+	month === 04 ? (day < 21 ? EarlyTxt  + spring : MiddleTxt + spring):
+	month === 05 ? (day < 21 ? MiddleTxt + spring : LateTxt   + spring):
+	month === 06 ? (day < 21 ? LateTxt   + spring : EarlyTxt  + summer):
+	month === 07 ? (day < 21 ? EarlyTxt  + summer : MiddleTxt + summer):
+	month === 08 ? (day < 21 ? MiddleTxt + summer : LateTxt   + summer):
+	month === 09 ? (day < 21 ? LateTxt   + summer : EarlyTxt  + autumn):
 	month === 10 ? (day < 21 ? EarlyTxt  + autumn : MiddleTxt + autumn):
 	month === 11 ? (day < 21 ? MiddleTxt + autumn : LateTxt   + autumn):
 	month === 12 ? /*       */ LateTxt   + autumn : EarlyTxt  + winter;
