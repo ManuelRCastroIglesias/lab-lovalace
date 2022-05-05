@@ -1,8 +1,8 @@
 const { Console } = require("console-mpds");
 const console = new Console();
 //// --------------------------------------------/
+/// <Autor: @Alberto Antelo. Autor principal. >
 /// <Autor:Manuel Rosendo Castro Iglesias.> 
-/// <Autor: >
 /// <Titulo: ### 4-split>
 //// --------------------------------------------/
 
@@ -11,6 +11,7 @@ let intMax;
 let intervals;
 const error = `Error!!! El máximo debe ser superior o igual al minimo`;
 let ok;
+
 do {
     ok = true;
     intMin = console.readNumber('Introduce el mínimo del intervalo: ');
@@ -20,7 +21,8 @@ do {
         ok = false;
     }
 } while (!ok);
-do {
+
+do { //Está en los requerimientos. (MRCI)
     ok = true;     //redundante, por si se modifica el código y por facilitar la lectura.
     intervals = console.readNumber('Introduce una cantidad positiva de intervalos: ');
     if (intervals <= 0) {
@@ -28,6 +30,7 @@ do {
         ok = false;
     }
 } while (!ok);
+
 const LenghtIntervals = (intMax - intMin) / intervals;
 let msg = `El intervalo [${intMin}, ${intMax}] dividido en ${intervals} intervalos son`;
 let init = intMin;

@@ -23,17 +23,17 @@ do
 {
 	day = console.readNumber( 'Escriba un día (1-30): ' );
 }
-while ( day <= 1 || day >= 30 );    // ¿Añadir verificación dias 31 o 28/29? ¡Interesante!
+while ( day < 1 || day >= 30 );    // ¿Añadir verificación dias 31 o 28/29? ¡Interesante!
 do
 {
 	month = console.readNumber( 'Escriba un mes (1-12): ' );
-}
-while ( mont <= 1 || month >= 30 ); // TODO: nameOfTheMonth, ¿crear método Nombres del mes?
+}//aqui abajo quita los = ¡Si!
+while ( mont < 1 || month > 12 ); // TODO: nameOfTheMonth, ¿crear método Nombres del mes?
 do
 {
 	year = console.readNumber( 'Escriba un año (… … … …): ' );
 }
-while ( year <= 1 || year >= 30 );
+while ( year < 1 || year > yearNow );
 
 	
 const mySeasonDay = day <= 21 ? `emporada baja` : `Temprada alta`;
@@ -87,12 +87,13 @@ const autumnSeasonText = " del Otoño";
 const mySeasonText = 
 		 month ===  1 ?  aboutEarly_Text + winterSeasonText: 
 		 month ===  2 ?  aboutMiddleText + winterSeasonText: 
-		 month ===  3 ?  
-			(day < 21 ? aboutLate_Text + winterSeasonText : aboutEarly_Text + springSeasonText):
+		 month ===  3 ?  (day < 21 ?
+						aboutLate_Text + winterSeasonText :
+						aboutEarly_Text + springSeasonText) :
 		 month ===  4 ?  aboutEarly_Text + springSeasonText: 
 		 month ===  5 ?  aboutMiddleText + springSeasonText: 
-		 month ===  6 ?  
-			(day < 21 ? aboutLate_Text + springSeasonText : aboutEarly_Text + summerSeasonText):
+						month === 6 ?
+							(day < 21 ? aboutLate_Text + springSeasonText : aboutEarly_Text + summerSeasonText) :
 		 month ===  7 ?  aboutEarly_Text + summerSeasonText: 
 		 month ===  8 ?  aboutMiddleText + summerSeasonText: 
 		 month ===  9 ?  

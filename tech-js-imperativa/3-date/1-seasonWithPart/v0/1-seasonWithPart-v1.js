@@ -1,8 +1,8 @@
 ﻿const { Console } = require("console-mpds");
 const console = new Console();
-// --------------------------------------------/
+//// --------------------------------------------/
 /// <Autor:> Manuel Rosendo Castro Iglesias.
-
+/// <Autor: @Alberto Antelo >
 // ### 1-seasonWithPart/v0
 // Da error con fechas fuera de rango, tengo que corregirlo.
 // Una vez esté terminado se eliminarán comentarios innecesarios.
@@ -14,7 +14,7 @@ const yearNow =2022;
 const day   = console.readNumber ('Escriba un día (1-30): ');
 const month = console.readNumber ('Escriba un mes (1-12): ');
 const year  = console.readNumber ('Escriba un año (… … … …): '); 
-
+////
 // TODO: mySeasons      * Crear bucle reintento con valores false *
 const mySeason_Day   = 	day   > 0 ? (day   <= 31      ? "El día " + day   : false ) : false ;
 // TODO: mySeason_Month * Si hay que nombrar el mes corregir el texto *
