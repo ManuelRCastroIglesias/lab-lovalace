@@ -15,13 +15,13 @@ const dSpring = 2 * dMonth + 21;
 const dSumer = 5 * dMonth + 21;
 const dAutumn = 8 * dMonth + 21;
 do {
-    day = console.readNumber('Dame el día: ');
+    day = console.readNumber('Dame el día (1-30): ');
 } while (day <= 0 || day > dMonth);
 do {
-    month = console.readNumber('Dame el més: ');
+    month = console.readNumber('Dame el més (1-12): ');
 } while (month <= 0 || month > mntYear);
 do {
-    year = console.readNumber('Dame el año: ');
+    year = console.readNumber('Dame el año (1-...): ');
 } while (year < 0);
 let msg = `El día ${day} del ${month} de ${year} cae a`;
 let season;

@@ -38,23 +38,39 @@ const summerSeasonTxt = " del Verano";
 const autumnSeasonTxt = " del Otoño";
 
 const mySeasonTxt =
-	month ===  1 ?  aboutEarlyTxt + winterSeasonTxt :
-	month ===  2 ?  aboutMiddleTxt + winterSeasonTxt :
-	month ===  3 ? (day < 21 ?
-				    aboutLateTxt + winterSeasonTxt :
-				    aboutEarlyTxt + springSeasonTxt) :
-	month ===  4 ?  aboutEarlyTxt + springSeasonTxt :
-	month ===  5 ?  aboutMiddleTxt + springSeasonTxt :
-	month ===  6 ? (day < 21 ? aboutLateTxt + springSeasonTxt :
-					aboutEarlyTxt + summerSeasonTxt) :
-	month ===  7 ?  aboutEarlyTxt + summerSeasonTxt :
-	month ===  8 ?  aboutMiddleTxt + summerSeasonTxt :
+	month === 1 ? (day < 21 ?
+		aboutEarlyTxt  + winterSeasonTxt :
+		aboutMiddleTxt + winterSeasonTxt):
+	month === 2 ? (day < 21 ?
+		aboutMiddleTxt + winterSeasonTxt :
+		aboutLateTxt   + winterSeasonTxt):
+	monh === 3 ? (day  < 21 ?
+		aboutLateTxt   + winterSeasonTxt :
+		aboutEarlyTxt  + springSeasonTxt):
+	month === 4 ? (day < 21 ?
+		aboutEarlyTxt  + springSeasonTxt :
+		aboutMiddleTxt + springSeasonTxt):
+	month === 5 ? (day < 21 ?
+		aboutMiddleTxt + springSeasonTxt :
+		aboutLateTxt   + springSeasonTxt):
+	month === 6 ? (day < 21 ?
+		aboutLateTxt   + springSeasonTxt :
+		aboutEarlyTxt  + summerSeasonTxt):
+	month === 7 ? (day < 21 ?
+		aboutEarlyTxt  + summerSeasonTxt :
+		aboutMiddleTxt + summerSeasonTxt):
+	month === 8 ? (day < 21 ?
+		aboutMiddleTxt + summerSeasonTxt :
+		aboutLateTxt   + summerSeasonTxt):
 	month === 9 ? (day < 21 ?
-					aboutLateTxt + summerSeasonTxt :
-					aboutEarlyTxt + autumnSeasonTxt) :
-	month === 10 ?  aboutEarlyTxt + autumnSeasonTxt :
-	month === 11 ?  aboutMiddleTxt + autumnSeasonTxt :
-		(day < 21 ? aboutLateTxt + autumnSeasonTxt :
-					aboutEarlyTxt + winterSeasonTxt);
+		aboutLateTxt   + summerSeasonTxt :
+		aboutEarlyTxt  + autumnSeasonTxt):
+	month === 10 ? (day < 21 ?
+		aboutEarlyTxt + autumnSeasonTxt :
+	month === 11 ? (day < 21 ?
+		aboutLateTxt + autumnSeasonTxt :
+		aboutEarlyTxt + winterSeasonTxt);
 
 console.writeln(`El día ${day} del ${month} del año ${year}/${mySeasonTxt}.`);
+
+//    aboutMiddleTxt + autumnSeasonTxt :
