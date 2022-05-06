@@ -22,11 +22,11 @@ const addedMinutes = firstMinutes + secondMinutes + minutesFromSeconds;
 const residueMinutes = addedMinutes % 60;
 const hoursFromMinutes = (addedMinutes - residueMinutes) / 60;
 
-/*// Para intecambiar código añadir barra al inicio.
-	/*/
+//*// Para intecambiar código añadir barra al inicio.
+/*/
 	const residueHours = firstHours + secondHours + hoursFromMinutes;
 	console.writeln(`La suma es ${residueHours}:${residueMinutes}:${residueSeconds}`);
-	/*/ // Era innecesario pero sale gratis.
+/*/ // Era innecesario pero sale gratis.
 	const addedHours = firstHours + secondHours + hoursFromMinutes;
 	const residueHours = addedHours % 24;
 	const daysFromHours = (addedHours - residueHours) / 24;

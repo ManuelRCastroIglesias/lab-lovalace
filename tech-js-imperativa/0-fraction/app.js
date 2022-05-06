@@ -1,6 +1,7 @@
 const { Console } = require("console-mpds");
 
 const console = new Console();
+// preguntar a MariaPaz a que ejercico corresponde.
 const fractions = [];
 const SIZE = 3;
 for (let i = 0; i < SIZE; i++) {
