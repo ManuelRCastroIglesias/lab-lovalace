@@ -23,6 +23,7 @@ gcd(int a, int b){
 }
 /*/
 
+si a > b entonces a = (a -b)
 
 
 
