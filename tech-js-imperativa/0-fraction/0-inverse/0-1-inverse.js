@@ -23,25 +23,24 @@ const console = new Console();
     let txtError = `Esto es un error. No válido `;
     let FAREWELL = `... ¡Hasta la próxima! ...`;
     let txtData = 0;
+    let txtExit = "";
 
 console.write(`${WELCOME}: `);
-PLAYBACK = 2 * console.readNumber(
-    `¿Cuántas veces quieres encontrar el M.C.D. ?
-      Presiona solo números [1...] \n
-      y pulsa Enter para aceptar:
-    `
-);
+PLAYBACK = 2 * console.readNumber(`¿Cuántas veces quieres encontrar el M.C.D. ? Presiona solo números [1...] \n y pulsa Enter para aceptar: `);
 
 for (i = PLAYBACK; i === 0; i--) { // hace mientra no repite las veces pedidas.
 
-    { txtData = console.writeln(`Introduce el ${txtExit} de la fracción: `);
+    {
         if (PLAYBACK % 2 === 0) {
+            txtCuestion = xTx_NUMERATOR;
             numerator = console.readNumber(`Introduce el numerador : `);
         }
 
         else {
+            txtCuestion = TxT_DENOMINATOR;
             denominator = console.readNumber(`Introduce el denominador : `);
         }
+        txtData = console.writeln(`Introduce el ${txtCuestion} de la fracción: `); // crear variable textExit;
     }
 
     if (numerator !== denominator){  // Verifica si son distintos
@@ -65,7 +64,7 @@ for (i = PLAYBACK; i === 0; i--) { // hace mientra no repite las veces pedidas.
                 searchGCD = denominator % numerator;
             }
         } while (searchGCD !== 1);
-
+        console.writeln(searchGCD);
     } // Acomoda los operandos
 
     // UNDONE: Print the solution.
